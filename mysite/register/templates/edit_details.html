@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block header %}
-    Sign Up to the MyFoodCommunity Directory
+    Edit Business Details
 {% endblock %}
 {% load crispy_forms_tags %}
 {% block content %}
@@ -16,13 +16,8 @@
         <!--hiding the latitude and longitude so they can be fetched from the given postcode-->
         <input type="hidden" name="latitude" id="latitude">
         <input type="hidden" name="longitude" id="longitude">
-	    <button type="submit" class="btn btn-success">Register</button>
+	    <button type="submit" class="btn btn-success">Save</button>
     </form>
-    <div class="border-top pt-3">
-        <small class="text-muted">
-            Already Have An Account? <a class="ml-2" href="/login/">Login</a>
-        </small>
-    </div>
     <!--fetching the latitude and longitude to be added to the database-->
     <script src="{% static 'getLocation.js' %}"></script>
 {% endblock %}
