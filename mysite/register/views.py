@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from .forms import SignupForm
+from django.contrib.auth import login, logout
+from .forms import SignupForm, LoginForm
 from main.models import Business
 
 # Create your views here.
@@ -32,3 +33,21 @@ def signup(request):
 
 
     return render(request, "sign-up.html", {"form": form})
+
+#Log-in
+def loginuser(request):
+    if request.method == "POST":
+        form = LoginForm(request, data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            #send the user back to the main menu/map
+            return redirect("map")
+    else:
+        form = LoginForm()
+
+    return render(request, "login.html", {"form": form})
+
+def logoutuser(request):
+    logout(request)
+    return redirect("map")

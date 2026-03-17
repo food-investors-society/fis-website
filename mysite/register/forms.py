@@ -5,6 +5,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 
 
+
 class SignupForm(UserCreationForm):
     email = forms.EmailField(required=True)
     phone = forms.CharField(required=True)
@@ -24,3 +25,15 @@ class SignupForm(UserCreationForm):
             user.save()
 
         return user
+
+
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(required=True)
+    password = forms.CharField(widget=forms.PasswordInput, required=True)
+
+class EditBusinessForm(forms.ModelForm):
+    email = forms.EmailField(required=True)
+    phone = forms.CharField(required=True)
+    address = forms.CharField(required=True)
+    postcode = forms.CharField(required=True)
+    description = forms.CharField(widget=forms.Textarea, required=False)

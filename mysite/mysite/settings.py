@@ -22,6 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-pdq2^@8wsmegt7__r&1q!4)$3z4&*@7q5rlm-w0=afh9$=$3#a'
 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

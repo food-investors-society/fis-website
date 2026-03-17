@@ -24,5 +24,6 @@ urlpatterns = [
     path('', include('main.urls')),
     path('admin/', admin.site.urls),
     path('sign-up/', v.signup, name='signup'),
+    path('login/', v.loginuser, name='login'),
 
 ]

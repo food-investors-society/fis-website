@@ -1,0 +1,5 @@
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <input type="submit" value="Logout" />
+    <input type="hidden" name="next" value="{% url 'map' %}" />
+</form>
