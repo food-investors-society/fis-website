@@ -49,7 +49,7 @@
         <div class="container hero-content">
             <div class="hero-left">
                 <!-- <h1 class="small-title">ABOUT</h1> -->
-                <h1 class="big-title">Individual Annual</h1>
+                <h1 class="big-title">Annual Community Member</h1>
             </div>
             <!-- Sticky note
             <div class="sticky-stack">
@@ -133,15 +133,15 @@
         @@@@@@@@@@@@@@@@@@@@     FORM     @@@@@@@@@@@@@@@@@@@@@@
         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
         <section class="form-wrapper">
-            <h2>Annual Individual Membership Application Form</h2>
+            <h2>Annual Community Membership Application Form</h2>
             <p class="membership-initial-text">
                 Join The Food Investors Society and be part of a growing movement<br>creating a
                 healthier, fairer, and more sustainable food system.
             </p>
-            <form action="http://127.0.0.1:8000/api/membership/submit-membership/" method="POST">
+            <form action="http://fis-backend-test-env.eba-phyvw229.eu-west-2.elasticbeanstalk.com/api/enrolment/submit-enrolment/" method="POST">
 
                 <input type="hidden" name="turnstile_token" id="turnstile_token">
-                <input type="hidden" name="membership_plan" value="INDIVIDUAL_ANNUAL">
+                <input type="hidden" name="plan" value="CM-IA">
 
                 <!-- /////////////////////////////////////////////
                 ////////////// 1. PERSONAL DETAILS 
@@ -255,24 +255,39 @@
                 <br><br>
 
                 <!-- /////////////////////////////////////////////
-                ///////////// 4. DATA PROTECTION & CONSENT 
+                ///////////// 4. DATA PROTECTION & COMMUNICATIONS 
                 ////////////////////////////////////////////////-->
-                <h3>4. Data Protection and Consent<i> <span class="required">(required)</span></i></h3>
+                <h3>4. Data Protection and Communications <i> <span class="required">(required)</span></i></h3>
                 <p>
-                    “The Food Investors Society Ltd will use your information solely for administering
-                    your membership and communicating Society updates. Your details will be stored
-                    securely in line with UK GDPR.”
+                    Your personal data will be processed for the purposes of administering your membership, 
+                    fulfilling statutory reporting and governance requirements, and sending necessary 
+                    Society communications. This processing is carried out in accordance with UK GDPR and 
+                    is required for us to meet our legal and contractual obligations as a Community Benefit 
+                    Society.
                 </p>
                 <label>
                     <input type="checkbox" name="consent-contact" required>
-                    <i>I consent to The Food Investors Society contacting me with relevant news, updates, and invitations.</i>
+                    <i>
+                        I acknowledge that the Society will contact me regarding matters necessary to my 
+                        membership. This may include statutory notices, voting and governance information, 
+                        membership administration, and updates directly related to Society activities and 
+                        operations
+                    </i>
                 </label>
+                <br>
+                <p><b>Marketing and Optional Updates<i> <span class="required">(optional)</span></i></b></p>
                 <label>
-                    <input type="checkbox" name="consent-withdrawal" required> 
-                    <i>I understand I can withdraw my consent at any time.</i>
+                    <input type="checkbox" name="consent-marketing">
+                    <i>
+                        I consent to The Food Investors Society contacting me with newsletters, event 
+                        invitations, campaigns, and general updates about its work and activities.
+                    </i>
                 </label>
-
-                <br><br>
+                <p>
+                    You may withdraw your consent to receive marketing communications at any time 
+                    without affecting your membership.
+                </p>
+                <br>
 
                 <!-- ///////////////////////////////////////////////
                 //////// 5. VOTING & ELIGIBILITY CONFIRMATION 
@@ -372,8 +387,8 @@
                 </select>
 
                 <!-- Only filled if “Other” is selected -->
-                <label for="ethnicity-other" class="ethnicity-other-label">If other, please specify</label>
-                <input type="text" id="ethnicity-other" name="ethnicity-other">
+                <label for="ethnicity-other" id="ethnicity-other-label" class="ethnicity-other-label" hidden>If other, please specify</label>
+                <input type="text" id="ethnicity-other" name="ethnicity-other" hidden disabled>
 
                 <!-- disability -->
                 <label><b>Do you consider yourself to have a disability or long-term health condition?</b></label>
@@ -423,7 +438,7 @@
                 /////////// SUBMIT + REDIRECT TO PAYMENT 
                 ///////////////////////////////////////////////// -->
                 <!-- change from: Submit My Application -->
-                <button type="submit" class="submit-button">Submit & Proceed to Payment</button> 
+                <button type="submit" class="submit-button">Submit Application</button> 
                 
             </form>
         </section>
@@ -440,6 +455,8 @@
         <div class="container">
             <h2>Like What We Are Doing? Join the Movement!</h2>
             <a href="join-us.html">Join the Society</a>
+            <a href="about-supporter.html">Become a Supporter</a>
+            <a href="about-m3-volunteer.html">Become a Volunteer</a>
             <a href="my-foodX-community-partners-about.html">Get Your Business Listed in the App</a>
             <a href="donation.html">Donate</a>
         </div>
@@ -478,7 +495,7 @@
                 <span class="dot"></span>
                 <a href="business.html" class="footer-link">Business</a>
                 <span class="dot"></span>
-                <a href="contact-us.html" class="footer-link">Contact Us</a>
+                <a href="contact-us.html" class="footer-link">Contact</a>
             </div>
         </div>
     </footer>
@@ -525,6 +542,24 @@
         syncOtherAmount();
     </script>
 
+    <script>
+        const ethnicity = document.getElementById("ethnicity");
+        const ethnicityOther = document.getElementById("ethnicity-other");
+        const ethnicityOtherLabel = document.getElementById("ethnicity-other-label");
+
+        function syncEthnicityOther() {
+            if (!ethnicity || !ethnicityOther || !ethnicityOtherLabel) return;
+
+            const on = ethnicity.value === "other";
+            ethnicityOther.hidden = !on;
+            ethnicityOtherLabel.hidden = !on;
+            ethnicityOther.disabled = !on;
+            ethnicityOther.required = on;
+            if (!on) ethnicityOther.value = "";
+        }
+        ethnicity?.addEventListener("change", syncEthnicityOther);
+        syncEthnicityOther();
+    </script>
 
 </body>
 </html>

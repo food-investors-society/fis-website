@@ -516,7 +516,7 @@
 ---------------------------------------------*/
 /* LEFT */
 .get-the-app {
-    margin-top: 10px;
+    margin-top: 50px;
     background-color: #00400020;
     /* background: linear-gradient(to right, #FFB300, #004000); */
     /* background-color: #004000; */
@@ -534,7 +534,7 @@
     display: flex;
 }
 .phone-screen-box .left-phone-screen {
-    margin-top: 70px;
+    margin-top: 90px;
     margin-bottom: 70px;
     margin-left: 50px;
     width: 470px;
@@ -622,8 +622,8 @@
 --------------- APP FEATURES
 ------------------------------------------*/
 .app-features-try {
-    margin-bottom: 80px;
-    margin-top: 80px;
+    margin-bottom: 120px;
+    margin-top: 60px;
 }
 .app-features-try .features-row h2{
     font-family: "Inter", sans-serif;

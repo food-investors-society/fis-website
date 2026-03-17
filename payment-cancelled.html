@@ -12,7 +12,7 @@
     </script>
 
     <meta charset="UTF-8">
-    <title>Application Submitted</title>
+    <title>Payment Cancelled</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" href="assets/icons/favicon/favicon.png" type="image/x-icon">
@@ -24,16 +24,17 @@
 
     <div class="box">
         <div class="row membership-row">
-            <img src="assets/icons/thank_you/tick.png" class="icon thank-you">
-            <h1 id="title">Thank you!</h1>
+            <img src="assets/icons/thank_you/x.png" class="icon thank-you">
+            <h1 id="title">Payment Cancelled</h1>
         </div>
-        <p id="message">Your application has been submitted successfully.</p>
+        <p id="message">Your payment was not completed and no charges have been made.</p>
+        <p id="message">If this was a mistake, you can try again using the button below.</p>
 
-        <a href="index.html" class="return-cta-btn">Go to Homepage</a>
+        <div class="row-payment-buttons">
+            <a href="membership.html" class="button">Try Again</a>
+            <a href="index.html" class="button">Go to Homepage</a>
+        </div>
     </div>
 
-
-
-    <script src="js/thank_you.js"></script>
 </body>
 </html>
