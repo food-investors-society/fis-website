@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 from main import views
 from register import views as v
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -25,5 +26,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('sign-up/', v.signup, name='signup'),
     path('login/', v.loginuser, name='login'),
-
+    path('logout/', v.logoutuser, name='logout'),
+    path('password-reset/', auth_views.PasswordResetView.as_view(template_name='changepassword.html',success_url='/login/'), name='password_reset'),
+    path('password-reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
+    path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='passwordchanged.html', success_url='/login/'), name='password_reset_confirm'),
+    path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 ]

@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from .forms import SignupForm, LoginForm
+from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import get_template
+from django.template import Context
 from main.models import Business
 
 # Create your views here.
@@ -25,6 +29,13 @@ def signup(request):
                 latitude=latitude,
                 longitude=longitude,
             )
+            htmly = get_template('user/Email.html')
+            d = { 'username': username }
+            subject, from_email, to = 'welcome', 'your_email@gmail.com', email
+            html_content = htmly.render(d)
+            msg = EmailMultiAlternatives(subject, html_content, from_email, [to])
+            msg.attach_alternative(html_content, "text/html")
+            msg.send()
             #send the user back to the main menu/map
             return redirect("map")
     else:
