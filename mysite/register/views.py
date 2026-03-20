@@ -29,9 +29,9 @@ def signup(request):
                 latitude=latitude,
                 longitude=longitude,
             )
-            htmly = get_template('user/Email.html')
-            d = { 'username': username }
-            subject, from_email, to = 'welcome', 'your_email@gmail.com', email
+            htmly = get_template('registeremail.html')
+            d = { 'username': user.username }
+            subject, from_email, to = 'welcome', 'your_email@gmail.com', user.email
             html_content = htmly.render(d)
             msg = EmailMultiAlternatives(subject, html_content, from_email, [to])
             msg.attach_alternative(html_content, "text/html")
