@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
+from django.contrib.auth.decorators import login_required
 from .forms import SignupForm, LoginForm, EditBusinessForm, UpdateUserForm
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
@@ -22,7 +23,7 @@ def signup(request):
             #Creating submitting the business data to the database, lat and lon have been fetched via the js function
             Business.objects.create(
                 user=user,
-                phone_number=form.cleaned_data["phone"],
+                phone=form.cleaned_data["phone"],
                 address=form.cleaned_data["address"],
                 postcode=form.cleaned_data["postcode"],
                 description=form.cleaned_data.get("description", ""),
@@ -64,7 +65,7 @@ def logoutuser(request):
     return redirect("map")
 
 @login_required
-def edit_details(request):
+def editdetails(request):
 
     if request.method == "POST":
         uForm = UpdateUserForm(request.POST, instance=request.user)
@@ -83,5 +84,5 @@ def edit_details(request):
         uForm = UpdateUserForm(instance=request.user)
         bForm = EditBusinessForm(instance=request.user.business)
 
-    return render(request, "edit-details.html", {"uform": uForm, "bform": bForm})
+    return render(request, "editdetails.html", {"uform": uForm, "bform": bForm})
 

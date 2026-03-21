@@ -12,7 +12,7 @@ def map(request):
     for business in businesses:
         b_data.append({
             "email" : business.user.email,
-            "phone" : business.phone_number,
+            "phone" : business.phone,
             "address" : business.address,
             "postcode" : business.postcode,
             "description" : business.description,

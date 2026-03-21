@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 #Table for storing businesses to be added to the map, this table functions for log in and when calling data for the map
 class Business(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    phone_number = models.CharField(max_length=11)
+    phone= models.CharField(max_length=11)
     address = models.CharField(max_length=100)
     postcode = models.CharField(max_length=100)
     description = models.TextField()
@@ -18,7 +18,7 @@ class Business(models.Model):
 #Events are made by admins and used for public events
 class Event(models.Model):
     email = models.EmailField()
-    phone_number = models.CharField(max_length=11)
+    phone = models.CharField(max_length=11)
     address = models.CharField(max_length=100)
     postcode = models.CharField(max_length=100)
     description = models.TextField()
