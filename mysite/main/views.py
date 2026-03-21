@@ -12,7 +12,7 @@ def map(request):
     b_data = []
     for business in businesses:
         b_data.append({
-            "business_name": business.business_name,
+            "name": business.name,
             "email" : business.user.email,
             "phone" : business.phone,
             "address" : business.address,
@@ -24,7 +24,7 @@ def map(request):
         })
     for event in events:
         b_data.append({
-            "event_name": event.event_name,
+            "name": event.name,
             "email" : event.email,
             "phone" : event.phone,
             "address" : event.address,

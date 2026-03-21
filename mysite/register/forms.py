@@ -8,15 +8,16 @@ from main.models import Business
 
 
 class SignupForm(UserCreationForm):
-    email = forms.EmailField(required=True)
-    phone = forms.CharField(required=True)
-    address = forms.CharField(required=True)
-    postcode = forms.CharField(required=True)
-    description = forms.CharField(widget=forms.Textarea, required=False)
+    email = forms.EmailField(required=True, label="Business Email")
+    name = forms.CharField(required=True, label="Business Name")
+    phone = forms.CharField(required=True , label="Business Phone Number")
+    address = forms.CharField(required=True , label="Business Address")
+    postcode = forms.CharField(required=True, label="Business Postcode")
+    description = forms.CharField(widget=forms.Textarea, required=False, label="Give a description of your business")
 
     class Meta:
         model = User
-        fields = ["username","email", "phone", "password1", "password2", "address", "postcode", "description"]
+        fields = ["username", "password1", "password2", "name", "email", "phone", "address", "postcode", "description"]
 
     def save(self, commit=True):
         user = super().save(commit=False)
@@ -33,17 +34,18 @@ class LoginForm(AuthenticationForm):
     password = forms.CharField(widget=forms.PasswordInput, required=True)
 
 class EditBusinessForm(forms.ModelForm):
-    phone = forms.CharField(required=True)
-    address = forms.CharField(required=True)
-    postcode = forms.CharField(required=True)
-    description = forms.CharField(widget=forms.Textarea, required=False)
+    name = forms.CharField(required=True, label="Business Name")
+    phone = forms.CharField(required=True , label="Business Phone Number")
+    address = forms.CharField(required=True , label="Business Address")
+    postcode = forms.CharField(required=True, label="Business Postcode")
+    description = forms.CharField(widget=forms.Textarea, required=False, label="Give a description of your business")
     class Meta:
         model = Business
-        fields = ["phone", "address", "postcode", "description"]
+        fields = ["name", "phone", "address", "postcode", "description"]
 
 class UpdateUserForm(forms.ModelForm):
     username = forms.CharField(required=True)
-    email = forms.EmailField(required=True)
+    email = forms.EmailField(required=True, label="Business Email")
     class Meta:
         model = User
         fields = ["username", "email"]

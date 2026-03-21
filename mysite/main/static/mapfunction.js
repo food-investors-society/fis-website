@@ -2,7 +2,6 @@ const search = document.getElementById('search');
 const result= document.getElementById('result');
 const currentMarkers = [];
 
-
 const map = L.map("map").setView([0,0], 2);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -10,9 +9,14 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 for (const m of bdata){
     const marker = L.marker([m.latitude, m.longitude]).addTo(map)
-    marker.bindPopup(
-    m.email + "<br>" + m.phone + "<br>" + m.address + "<br>" + m.postcode + "<br>" + m.description
-    );
+    marker.bindPopup(`
+    <h2>${m.name}</h2>
+    <p><b>Email:</b> ${m.email}</p>
+    <p><b>Phone Number:</b> ${m.phone}</p>
+    <p><b>Address:</b> ${m.address}</p>
+    <p><b>Postcode:</b> ${m.postcode}</p>
+    <p><b>Information:</b> ${m.description}</p>
+    `);
     currentMarkers.push(marker);
     }
 
