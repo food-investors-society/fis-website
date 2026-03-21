@@ -18,7 +18,7 @@
             <li><a href="/map/">MyFoodCommunity</a></li>
             <li><a href="/map/">Contact Us</a></li>
             {% if user.is_authenticated %}
-                <!--<li><a href="/edit/">Edit Details</a></li>-->
+                <li><a href="/edit/">Edit Details</a></li>
                 <li><a href="/password-reset/">Change Password</a></li>
                 <li>{% include "_logout.html" %}</li>
             {% else %}

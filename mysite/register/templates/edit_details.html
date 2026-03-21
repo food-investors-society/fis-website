@@ -12,7 +12,8 @@
 {% block content %}
     <form method="POST" class="form-group" id="form">
 	    {% csrf_token %}
-	    {{ form|crispy }}
+	    {{ uform|crispy }}
+        {{ bform|crispy }}
         <!--hiding the latitude and longitude so they can be fetched from the given postcode-->
         <input type="hidden" name="latitude" id="latitude">
         <input type="hidden" name="longitude" id="longitude">

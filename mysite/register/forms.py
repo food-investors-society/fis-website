@@ -3,6 +3,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
+from main.models import Business
 
 
 
@@ -32,8 +33,17 @@ class LoginForm(AuthenticationForm):
     password = forms.CharField(widget=forms.PasswordInput, required=True)
 
 class EditBusinessForm(forms.ModelForm):
-    email = forms.EmailField(required=True)
     phone = forms.CharField(required=True)
     address = forms.CharField(required=True)
     postcode = forms.CharField(required=True)
     description = forms.CharField(widget=forms.Textarea, required=False)
+    class Meta:
+        model = Business
+        fields = ["phone", "address", "postcode", "description"]
+
+class UpdateUserForm(forms.ModelForm):
+    username = forms.CharField(required=True)
+    email = forms.EmailField(required=True)
+    class Meta:
+        model = User
+        fields = ["username", "email"]
