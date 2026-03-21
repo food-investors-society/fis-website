@@ -3,15 +3,20 @@
 <html>
 <head>
     <title>{% block title %}My Food Community{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!--Linkning CSS -->
+    <link href="{% static 'mvp.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="{% static 'styles.css' %}" rel="stylesheet" type="text/css">
+
     {%block add %}
     {% endblock %}
 </head>
 <body>
-    <header>
+    <h1>
         {% block header %}
         {% endblock %}
-    </header>
+    </h1>
     <!-- Navigation Bar -->
     <nav>
         <ul class="nav">

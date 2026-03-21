@@ -1,39 +1,28 @@
-.nav li {
-    display: inline-block;
-}
-.nav {
-    overflow: hidden;
-    list-style: none;
-    text-align: center;
-    font-size: 1.25em;
-    margin-bottom: 30px;
-    border-bottom: 1px solid;
-    padding: 10px;
-}
-header {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: 1px solid;
-    padding: 20px;
-    margin-bottom: -20px;
-}
-body {
-    line-height: 1.5;
-    color: black;
-    background-color: white;
-}
-input[type=text] {
-  padding: 10px;
-  width: 500px;
-  margin-top: 8px;
-  margin-right: 16px;
-  border: none;
-  font-size: 17px;
-}
 #map {
-position: relative;
-margin-top: 50px;
-min-height: 500px;;
-outline-style: none;
+    position: relative;
+    margin-top: 25px;
+    min-height: 500px;;
+    outline-style: none;
+}
+
+#content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+h1 {
+    text-align:center;
 }
