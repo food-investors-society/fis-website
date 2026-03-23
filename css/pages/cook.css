@@ -1,0 +1,140 @@
+.cook-container {
+  padding: 50px 50px 80px 80px;
+  height: 800px;
+}
+
+/* TOGGLE */
+.recipes-hacks-toggle {
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+/* FILTER ROW */
+.filter-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+/* GRID */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* RIGHT SIDE */
+.right-controls {
+  display: flex;
+  align-items: center;
+}
+
+.toggle,
+.filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* TOGGLE */
+.toggle-btn {
+  background: white;
+  border: 2px solid #ddd;
+  padding: 8px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  transition: all 0.1s ease;
+}
+.toggle-btn.active {
+  background: #004000;
+  color: white;
+  border-color: #004000;
+}
+.toggle-btn:hover {
+  background: #ffb300;
+  color: #004000;
+  border-color: #ffb300;
+}
+
+/* FILTERS */
+.filters-btn {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 0.1s ease;
+}
+.filters-btn.active {
+  background: #004000;
+  color: white;
+  border-color: #004000;
+}
+.filters-btn:hover {
+  background: #ffb300;
+  color: #004000;
+  border-color: #ffb300;
+}
+
+/* SKILL DROPDOWN */
+#skillFilter {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+#skillFilter:hover {
+  background: #ffb300;
+  color: #004000;
+  border-color: #ffb300;
+}
+
+/* CARD */
+.card {
+  display: block;
+  transition: 0.2s ease;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex-direction: column;
+}
+.card-link{
+  text-decoration: none;
+  display: block;
+}
+.card-link:hover .card{
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 10px 18px;
+}
+.card h3 {
+  margin: 0 0 6px 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: #004000
+}

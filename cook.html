@@ -17,6 +17,7 @@
 
     <link rel="icon" href="assets/icons/favicon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/pages/cook.css">
 </head>
 <body>
 
@@ -80,10 +81,163 @@
         </div>
     </div>
 
-    <!-- FoodX100 Database -->
+    <!-- //////////////// COOK FEATURE //////////////// -->
     <div class="cook-container">
-        <div class="cook-database">
-            <p>Add Cook Feature</p>
+        <!-- Recipe/Hacks toggle -->
+        <div class="recipes-hacks-toggle">
+            <button class="toggle-btn active" onclick="setType('recipe', this)"> Recipes</button>
+            <button class="toggle-btn" onclick="setType('hack', this)"> Hacks</button>
+        </div>
+        
+        <div class="filter-row">
+            <!-- LEFT -->
+            <!-- Recipe Filters -->
+            <div class="filters" id="recipeFilters">
+                <button class="filters-btn" data-category="budget" onclick="setCategory('budget', this)">Budget</button>
+                <button class="filters-btn" data-category="quick" onclick="setCategory('quick', this)">Quick</button>
+                <button class="filters-btn" data-category="lowcal" onclick="setCategory('lowcal', this)">Low Calorie</button>
+                <button class="filters-btn" data-category="lowcarb" onclick="setCategory('lowcarb', this)">Low Carb</button>
+            </div>
+
+            <!-- Hacks Filters -->
+            <div class="filters" id="hackFilters" style="display: none;">
+                <button class="filters-btn" data-category="cooking" onclick="setCategory('cooking', this)">Cooking</button>
+                <button class="filters-btn" data-category="storage" onclick="setCategory('storage', this)">Storage</button>
+                <button class="filters-btn" data-category="cleaning" onclick="setCategory('cleaning', this)">Cleaning</button>
+                <button class="filters-btn" data-category="money" onclick="setCategory('money', this)">Money-Saving</button>
+                <button class="filters-btn" data-category="time" onclick="setCategory('time', this)">Time-Saving</button>
+            </div>
+
+            <!-- RIGHT -->
+            <!-- Skill levels Dropdown -->
+            <div class="right-controls">
+                <select id="skillFilter" onchange="setSkill(this.value)">
+                    <option value="all">All Levels</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="novice">Novice</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="recipe-grid">
+            <!-- card -->
+            <div class="card-wrapper">
+                <a href="#" class="card-link">
+                    <div class="card" data-type="recipe" data-category="quick budget" data-skill="beginner">
+                        <img src="assets/images/cook/recipes/recipe1.jpg">
+                        <div class="card-content">
+                            <h3>Recipe 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- card -->
+            <div class="card-wrapper">
+                <a href="#" class="card-link">
+                    <div class="card" data-type="recipe" data-category="quick lowcal" data-skill="beginner">
+                        <img src="assets/images/cook/recipes/recipe2.jpg">
+                        <div class="card-content">
+                            <h3>Recipe 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- card -->
+            <div class="card-wrapper">
+                <a href="#" class="card-link">
+                    <div class="card" data-type="recipe" data-category="lowcarb budget" data-skill="beginner">
+                        <img src="assets/images/cook/recipes/recipe2.jpg">
+                        <div class="card-content">
+                            <h3>Recipe 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- card -->
+            <div class="card-wrapper">
+                <a href="#" class="card-link">
+                    <div class="card" data-type="recipe" data-category="lowcal budget" data-skill="beginner">
+                        <img src="assets/images/cook/recipes/recipe1.jpg">
+                        <div class="card-content">
+                            <h3>Recipe 4</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- card -->
+            <div class="card-wrapper">
+                <a href="#" class="card-link">
+                    <div class="card" data-type="recipe" data-category="quick" data-skill="advanced">
+                        <img src="assets/images/cook/recipes/recipe2.jpg">
+                        <div class="card-content">
+                            <h3>Recipe 5</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- card -->
+            <div class="card-wrapper">
+                <a href="#" class="card-link">
+                    <div class="card" data-type="hack" data-category="money storage" data-skill="beginner">
+                        <img src="assets/images/cook/hacks/hack1.jpg">
+                        <div class="card-content">
+                            <h3>Hack 1</h3>
+                            <p>Lorem ipsum dolor sit amet,consectetur <br>adipiscing elit</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- card -->
+            <div class="card-wrapper">
+                <a href="#" class="card-link">
+                    <div class="card" data-type="hack" data-category="cleaning time" data-skill="beginner">
+                        <img src="assets/images/cook/hacks/hack1.jpg">
+                        <div class="card-content">
+                            <h3>Hack 2</h3>
+                            <p>Lorem ipsum dolor sit amet,consectetur <br>adipiscing elit</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- card -->
+            <div class="card-wrapper">
+                <a href="#" class="card-link">
+                    <div class="card" data-type="hack" data-category="time cooking" data-skill="beginner">
+                        <img src="assets/images/cook/hacks/hack2.jpg">
+                        <div class="card-content">
+                            <h3>Hack 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- card -->
+            <div class="card-wrapper">
+                <a href="#" class="card-link">
+                    <div class="card" data-type="hack" data-category="money time cooking" data-skill="beginner">
+                        <img src="assets/images/cook/hacks/hack2.jpg">
+                        <div class="card-content">
+                            <h3>Hack 4</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur <br>adipiscing elit</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -166,5 +320,7 @@
         </div>
     </footer>
 
+
+    <script src="js/recipe_hack_toggle.js"></script>
 </body>
 </html>
