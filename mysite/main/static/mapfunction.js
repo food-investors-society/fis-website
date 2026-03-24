@@ -1,6 +1,7 @@
 const search = document.getElementById('search');
 const result= document.getElementById('result');
 const currentMarkers = [];
+var neighbourhoodradius = null;
 
 const map = L.map("map").setView([0,0], 2);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -51,9 +52,12 @@ document.getElementById('search').addEventListener('keydown', (e) => {
 
 function setResult(response, location) {
     result.innerHTML = "";
-    for (const marker of currentMarkers) {
-        map.removeLayer(marker);
+
+    if (neighbourhoodradius != null){
+        map.removeLayer(neighbourhoodradius);
     }
+
+
     if (response.length == 0){
         result.innerHTML = "We couldn't locate: " + location ;
         return;
@@ -61,6 +65,6 @@ function setResult(response, location) {
 
     result.innerHTML = 'Showing MyFoodX Neighbourhood locations near to: ' + location;
     const position = new L.LatLng(response[0].lat, response[0].lon);
-    currentMarkers.push(new L.circle(position, {radius : 3000}).addTo(map));
+    neighbourhoodradius = new L.circle(position, {radius : 3000}).addTo(map);
     map.flyTo(position, 12.8);
 }
