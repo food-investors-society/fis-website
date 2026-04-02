@@ -12,10 +12,11 @@
 
     <meta charset="UTF-8" />
     <title>FoodX100</title>
+    <meta name="description" content="FoodX100 — your searchable grocery guide to minimally processed, better food choices. Compare nutrition scores, filter by retailer, and shop smarter." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" href="assets/icons/favicon/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css" /> 
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/pages/foodx100.css" />
 </head>
 <body>
@@ -43,7 +44,8 @@
             </div>
             <div class="hero-right">
                 <p>Discover food with<br>high wHealth returns</p>
-                <img src="assets/icons/features_slider/foodX.svg" class="icon graph-hero">
+                <!-- FIXED: added meaningful alt text -->
+                <img src="assets/icons/features_slider/foodX.svg" alt="FoodX growth graph" class="icon graph-hero">
             </div>
         </div>
     </header>
@@ -55,20 +57,17 @@
                 <h2>Your Good Food Intelligence Tool</h2>
                 <p>
                     Choosing the right products at the supermarket can feel overwhelming.
-                    <br><span class="bold-text">foodX100</span> is your searchable grocery guide to minimally processed, “better choice”
-                    <br>foods, helping you find products that support your wellbeing and your budget.
+                    <span class="bold-text">foodX100</span> is your searchable grocery guide to minimally processed, "better choice"
+                    foods, helping you find products that support your wellbeing and your budget.
                 </p>
-                <div class="foodX100-features">
-                    <p>
-                        <img src="assets/icons/foodx100/pointing_hand_orange.svg" alt=""><span class="bold-text">&nbsp;&nbsp;Search groceries</span>
-                        <br><img src="assets/icons/foodx100/pointing_hand_orange.svg" alt=""><span class="bold-text">&nbsp;&nbsp;Compare nutrition scores</span>
-                        <br><img src="assets/icons/foodx100/pointing_hand_orange.svg" alt=""><span class="bold-text">&nbsp;&nbsp;Check prices</span>
-                        <br><img src="assets/icons/foodx100/pointing_hand_orange.svg" alt=""><span class="bold-text">&nbsp;&nbsp;Filter by retailer</span>
-                    </p>
-                </div>
+                <ul class="foodX100-features">
+                    <li><img src="assets/icons/foodx100/pointing_hand_orange.svg" alt=""><span class="bold-text">Search groceries</span></li>
+                    <li><img src="assets/icons/foodx100/pointing_hand_orange.svg" alt=""><span class="bold-text">Compare nutrition scores</span></li>
+                    <li><img src="assets/icons/foodx100/pointing_hand_orange.svg" alt=""><span class="bold-text">Check prices</span></li>
+                    <li><img src="assets/icons/foodx100/pointing_hand_orange.svg" alt=""><span class="bold-text">Filter by retailer</span></li>
+                </ul>
                 <p>
-                    Build your list of “good food buys” before you
-                    <br>shop and save time, money, and guesswork.
+                    Build your list of "good food buys" before you shop and save time, money, and guesswork.
                 </p>
             </div>
         </div>
@@ -76,72 +75,73 @@
 
     <!-- FOODX100 DATABASE -->
     <div class="database-container">
-        <h2>Search the FoodX Lite Database ! </h2>
+        <h2>Search the FoodX Lite Database!</h2>
 
-<div class="filter-bar">
+        <div class="filter-bar">
 
-    <!-- Search -->
-    <div class="filter-search">
-        <input type="text" id="searchInput" placeholder="Search products...">
-    </div>
-
-    <!-- Filter Section -->
-    <div class="filter-section">
-
-        <div class="filter-item">
-            <label for="nutriFilter">Nutriscore</label>
-            <select id="nutriFilter">
-                <option value="all" selected>All</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-            </select>
-        </div>
-
-        <div class="filter-item">
-            <label for="ecoFilter">Ecoscore</label>
-            <select id="ecoFilter">
-                <option value="all" selected>All</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-            </select>
-        </div>
-
-        <div class="filter-item">
-            <label for="novaFilter">NOVA Group</label>
-            <select id="novaFilter">
-                <option value="all" selected>All</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-        </div>
-
-        <div class="filter-item">
-        <label for="brandFilter">Brand</label>
-        <select id="brandFilter">
-            <option value="all" selected>All</option>
-        </select>
-        </div>
-
-        <div class="category-section">
-            <span class="category-title">Categories:</span>
-            <div class="category-filters">
-                <label><input type="checkbox" class="categoryCheck" value="fruit"><span>Fruit</span></label>
-                <label><input type="checkbox" class="categoryCheck" value="vegetables"><span>Vegetables</span></label>
-                <label><input type="checkbox" class="categoryCheck" value="snacks"><span>Snacks</span></label>
-                <label><input type="checkbox" class="categoryCheck" value="drinks"><span>Drinks</span></label>
+            <!-- Search -->
+            <div class="filter-search">
+                <input type="text" id="searchInput" placeholder="Search products...">
             </div>
-        </div>
 
-    </div>
-</div>
+            <!-- Filter Section -->
+            <div class="filter-section">
+
+                <div class="filter-item">
+                    <label for="nutriFilter">Nutriscore</label>
+                    <select id="nutriFilter">
+                        <option value="all" selected>All</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="ecoFilter">Ecoscore</label>
+                    <select id="ecoFilter">
+                        <option value="all" selected>All</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="novaFilter">NOVA Group</label>
+                    <select id="novaFilter">
+                        <option value="all" selected>All</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="brandFilter">Brand</label>
+                    <select id="brandFilter">
+                        <option value="all" selected>All</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="category-section">
+                <span class="category-title">Categories:</span>
+                <div class="category-filters">
+                    <label><input type="checkbox" class="categoryCheck" value="fruit"><span>Fruit</span></label>
+                    <label><input type="checkbox" class="categoryCheck" value="vegetables"><span>Vegetables</span></label>
+                    <label><input type="checkbox" class="categoryCheck" value="snacks"><span>Snacks</span></label>
+                    <label><input type="checkbox" class="categoryCheck" value="drinks"><span>Drinks</span></label>
+                </div>
+            </div>
+
+        </div>
 
         <!-- Product Cards -->
         <div class="foodx100-database">
@@ -150,33 +150,31 @@
         </div>
 
         <!-- Modal -->
-        <div id="product-modal" class="modal">
+        <div id="product-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <div class="modal-content">
-                <span class="close-btn">&times;</span>
+                <span class="close-btn" role="button" aria-label="Close modal">&times;</span>
                 <div id="modal-body"></div>
             </div>
         </div>
-    </div> <!-- end database-container -->
+
+    </div>
 
     <!-- PART OF A BIGGER MISSION -->
     <div class="page-wrapper">
         <div class="foodx100-bigger-mission">
             <h2>Switch your plate, fuel the future</h2>
             <p>
-                <span class="bold-text">foodX100</span> is just the beginning. It's your first taste of the full <span class="bold-text">foodXchange app</span> 
-                <br>experience. Explore smarter grocery choices, compare nutrition,
-                <br>and discover better-for-you foods before anyone else.
+                <span class="bold-text">foodX100</span> is just the beginning. It's your first taste of the full <span class="bold-text">foodXchange app</span>
+                experience. Explore smarter grocery choices, compare nutrition,
+                and discover better-for-you foods before anyone else.
                 <br><br>
-                Ready to diversify your kitchen portfolio? Help us shape what’s next. Become a Pioneer
-                <br>share investor, or sign up for the Founders List. We’re building the future of food, and honestly?
-                <br>It’s going to be a wild ride. You know you want in.
-            </p>   
+                Ready to diversify your kitchen portfolio? Help us shape what's next. Become a Pioneer
+                share investor, or sign up for the Founders List. We're building the future of food, and honestly?
+                It's going to be a wild ride. You know you want in.
+            </p>
             <div class="buttons-row-foodx100">
-                <div class="foodx100-foodXchange-founder">
-                    <a href="join-us.html" class="become-founder-btn">Be a foodXchange Founder</a>
-                </div>
-                <div class="foodx100-early-access">
-                    <a href="#" class="early-access-btn">Get Early Access</a>
+                <div class="foodx100-foodXchange-share-owner">
+                    <a href="about-m8-share-owner.html" class="become-share-owner-btn">Become a shared owner</a>
                 </div>
                 <div class="foodx100-faq">
                     <a href="faq.html" class="open-faq-btn">Frequently Asked Questions</a>
@@ -201,12 +199,12 @@
             <h2><b>Stay Connected</b></h2>
             <p>Follow our journey as we build the UK's first community-owned digital food platform.</p>
             <div class="social-icons-row">
-                <a href="https://www.facebook.com/profile.php?id=61584292981977" class="icon facebook"></a>
-                <a href="https://www.instagram.com/the_food_investors_society/" class="icon instagram"></a>
-                <a href="https://x.com/The_FIS_Ltd" class="icon x"></a>
-                <a href="https://www.tiktok.com/@food_investors_society" class="icon tiktok"></a>
-                <a href="https://www.linkedin.com/in/the-food-investors-society-65b19139b/" class="icon linkedin"></a>
-                <a href="https://www.youtube.com/channel/UCDL1ZwnawKkfYtzLyzDK5FA" class="icon youtube"></a>
+                <a href="https://www.facebook.com/profile.php?id=61584292981977" class="icon facebook" aria-label="Facebook"></a>
+                <a href="https://www.instagram.com/the_food_investors_society/" class="icon instagram" aria-label="Instagram"></a>
+                <a href="https://x.com/The_FIS_Ltd" class="icon x" aria-label="X (Twitter)"></a>
+                <a href="https://www.tiktok.com/@food_investors_society" class="icon tiktok" aria-label="TikTok"></a>
+                <a href="https://www.linkedin.com/in/the-food-investors-society-65b19139b/" class="icon linkedin" aria-label="LinkedIn"></a>
+                <a href="https://www.youtube.com/channel/UCDL1ZwnawKkfYtzLyzDK5FA" class="icon youtube" aria-label="YouTube"></a>
             </div>
         </div>
     </section>
