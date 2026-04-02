@@ -97,11 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       prodDiv.addEventListener('click', () => {
         modalBody.innerHTML = `
-          <h2 id="modal-title">${escapeHTML(product.product_name || 'Unnamed product')}</h2>
           <img src="${escapeHTML(product.image_url || 'assets/icons/placeholder.png')}"
                alt="${escapeHTML(product.product_name || 'Product')}"
                class="foodx100-image"
                onerror="this.src='assets/icons/placeholder.png'">
+          <h2 id="modal-title">${escapeHTML(product.product_name || 'Unnamed product')}</h2>
           <p><b>Brand:</b> ${escapeHTML(brand || 'N/A')}</p>
           <p><b>Nutriscore:</b> ${escapeHTML(product.nutriscore_grade || 'N/A')}</p>
           <p><b>Ecoscore:</b> ${escapeHTML(product.environmental_score_grade || 'N/A')}</p>
