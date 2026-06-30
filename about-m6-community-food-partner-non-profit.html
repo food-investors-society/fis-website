@@ -126,7 +126,7 @@
                 food projects, co-ops, and social enterprises working together for a healthier, fairer,
                 and more sustainable food future.
             </p>
-            <form action="http://fis-backend-test-env.eba-phyvw229.eu-west-2.elasticbeanstalk.com/api/enrolment/submit-enrolment/" method="POST" enctype="multipart/form-data">
+            <form action="https://fis-backend-test-env.eba-phyvw229.eu-west-2.elasticbeanstalk.com/api/enrolment/submit-enrolment/" method="POST" enctype="multipart/form-data">
 
                 <input type="hidden" name="turnstile_token" id="turnstile_token">
                 <input type="hidden" name="plan" value="NM-CN">
@@ -424,7 +424,9 @@
                 <!-- Cloudfare turnstile -->
                 <div class="cf-turnstile"
                     data-sitekey="0x4AAAAAACXo-XvqKsQcnMCn"
-                    data-callback="onTurnstileSuccess">
+                    data-callback="onTurnstileSuccess"
+                    data-expired-callback="onTurnstileExpired"
+                    data-error-callback="onTurnstileError">
                 </div>
 
                 <!-- ///////////////////////////////////////////////
@@ -497,6 +499,40 @@
         function onTurnstileSuccess(token) {
             document.getElementById("turnstile_token").value = token;
         }
+
+        function onTurnstileExpired() {
+            document.getElementById("turnstile_token").value = "";
+        }
+
+        function onTurnstileError() {
+            document.getElementById("turnstile_token").value = "";
+        }
+    </script>
+
+    <script>
+        const enrolmentForm = document.querySelector(".form-wrapper form");
+        const submitButton = enrolmentForm?.querySelector('button[type="submit"]');
+        const turnstileTokenInput = document.getElementById("turnstile_token");
+
+        enrolmentForm?.addEventListener("submit", (event) => {
+            if (!turnstileTokenInput?.value) {
+                event.preventDefault();
+                alert("Please complete the Turnstile check and try again.");
+                return;
+            }
+
+            if (enrolmentForm.dataset.submitting === "true") {
+                event.preventDefault();
+                return;
+            }
+
+            enrolmentForm.dataset.submitting = "true";
+
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = "Submitting...";
+            }
+        });
     </script>
 
     <script>
