@@ -439,3 +439,37 @@
     text-align: left;
     line-height: 1.8;
 }
+
+@media (max-width: 768px) {
+    .filter-bar {
+        padding: 24px 20px;
+    }
+
+    .filter-item,
+    .filter-item select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .foodx100-card {
+        width: min(100%, 320px);
+        height: auto;
+        min-height: 320px;
+    }
+
+    #product-container {
+        max-height: none;
+        padding: 10px 0 0;
+    }
+
+    .modal-content {
+        margin-top: 24px;
+        width: calc(100% - 24px);
+        padding: 18px;
+    }
+
+    .modal-content .foodx100-image {
+        height: auto;
+        max-height: 320px;
+    }
+}

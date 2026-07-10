@@ -1,0 +1,296 @@
+.coming-soon-page .hero-section {
+    background:
+        radial-gradient(circle at 108% -8%, rgba(255, 179, 0, 0.6), transparent 36%),
+        linear-gradient(135deg, #004000 0%, #0c4e1b 40%, #004000 72%, #0d3317 100%);
+}
+
+.coming-soon-page .hero-left h1,
+.coming-soon-page .hero-left .big-title {
+    color: #ffffff !important;
+}
+
+.coming-soon-intro {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.coming-soon-intro h2,
+.coming-soon-grid h2,
+.coming-soon-cta h2 {
+    color: #004000;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.coming-soon-intro p,
+.coming-soon-card p,
+.coming-soon-cta p {
+    color: #004000;
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.45;
+}
+
+.coming-soon-card li {
+    color: #004000;
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.45;
+}
+
+.coming-soon-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 24px;
+}
+
+.coming-soon-card {
+    display: flex;
+    align-items: stretch;
+    min-height: 360px;
+    background: #e7ebe8;
+    border: 1px solid rgba(0, 64, 0, 0.1);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.12);
+}
+
+.coming-soon-visual {
+    position: relative;
+    flex: 0 0 42%;
+    min-height: 360px;
+    background-size: cover;
+    background-position: center;
+}
+
+.coming-soon-card.image-left .coming-soon-visual {
+    -webkit-clip-path: polygon(0 0, 82% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 82% 0, 100% 100%, 0 100%);
+}
+
+.coming-soon-card.image-right .coming-soon-visual {
+    -webkit-clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.foodx100-visual {
+    background-image:
+        linear-gradient(90deg, rgba(0, 64, 0, 0.04), rgba(0, 64, 0, 0.18)),
+        url("../../assets/images/home/scan_food.jpg");
+    background-image:
+        linear-gradient(90deg, rgba(0, 64, 0, 0.04), rgba(0, 64, 0, 0.18)),
+        url("../../assets/images/home/scan_food.webp");
+}
+
+.community-visual {
+    background-image:
+        linear-gradient(90deg, rgba(0, 64, 0, 0.12), rgba(0, 64, 0, 0.04)),
+        url("../../assets/images/foodx_community/locall_food.jpg");
+    background-image:
+        linear-gradient(90deg, rgba(0, 64, 0, 0.12), rgba(0, 64, 0, 0.04)),
+        url("../../assets/images/foodx_community/locall_food.webp");
+}
+
+.cook-visual {
+    background-image:
+        linear-gradient(90deg, rgba(0, 64, 0, 0.04), rgba(0, 64, 0, 0.12)),
+        url("../../assets/images/cook/cooking.jpg");
+}
+
+.coming-soon-card-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 38px 40px 34px;
+}
+
+.coming-soon-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #ffb300;
+    color: #004000;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.coming-soon-card.image-right .coming-soon-label {
+    left: auto;
+    right: 20px;
+}
+
+.coming-soon-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.coming-soon-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    flex: 0 0 auto;
+}
+
+.coming-soon-icon img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.coming-soon-card h3 {
+    margin: 0;
+    color: #004000;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.05;
+}
+
+.coming-soon-card ul {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    padding-left: 22px;
+}
+
+.coming-soon-card li + li {
+    margin-top: 4px;
+}
+
+.coming-soon-cta {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    padding: 36px 38px 20px;
+    background:
+        radial-gradient(circle at 108% -8%, rgba(255, 179, 0, 0.6), transparent 36%),
+        /* radial-gradient(circle at 18% 18%, rgba(255, 196, 64, 0.18), transparent 24%), */
+        linear-gradient(135deg, #1b5e2c 0%, #0c4e1b 40%, #004000 72%, #0d3317 100%);
+    border-radius: 30px;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.16);
+}
+
+.coming-soon-cta h2,
+.coming-soon-cta p {
+    color: white;
+}
+
+.coming-soon-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px
+}
+
+.coming-soon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 28px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background: #ffb300;
+    color: #004000;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.1s ease;
+}
+
+.coming-soon-btn.secondary {
+    background: white;
+    border: 2px solid white;
+    color: #004000;
+}
+
+.coming-soon-card:hover {
+}
+
+.coming-soon-btn:hover {
+    background: transparent;
+    border: 2px solid #ffb300;
+    color: #ffb300;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.coming-soon-btn.secondary:hover {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.92);
+    color: white;
+}
+
+@media (max-width: 980px) {
+    .coming-soon-card {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .coming-soon-visual {
+        flex-basis: 0;
+        min-height: 240px;
+    }
+
+    .coming-soon-card.image-left .coming-soon-visual,
+    .coming-soon-card.image-right .coming-soon-visual {
+        -webkit-clip-path: none;
+        clip-path: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .coming-soon-intro,
+    .coming-soon-cta {
+        padding: 24px;
+    }
+
+    .coming-soon-card-content {
+        padding: 24px;
+    }
+
+    .coming-soon-intro h2,
+    .coming-soon-grid h2,
+    .coming-soon-cta h2,
+    .coming-soon-card h3 {
+        font-size: 28px;
+    }
+
+    .coming-soon-intro p,
+    .coming-soon-card p,
+    .coming-soon-card li,
+    .coming-soon-cta p {
+        font-size: 18px;
+    }
+
+    .coming-soon-buttons {
+        flex-direction: column;
+    }
+
+    .coming-soon-btn {
+        width: 100%;
+    }
+
+    .coming-soon-visual {
+        min-height: 200px;
+    }
+}

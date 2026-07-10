@@ -8,9 +8,6 @@
 .hero-section-app .hero-right  {
     margin-bottom: -15px;
 }
-.sticky-stack {
-    pointer-events: none;
-}
 /* ------------------------------------------
 -------------- TAGLINE 
 ---------------------------------------------*/
@@ -214,22 +211,28 @@ form input[type="checkbox"] {
 }
 /* Button */
 button[type="submit"] {
+    -webkit-appearance: none;
+    appearance: none;
     font-size: 20px;
     width: 42%;
+    display: inline-block;
+    width: auto;
     width: fit-content; 
     max-width: 100%; 
     padding: 0.8em 2em;      
     background: #004000;
     color: white;
-    border: none;
+    border: 2px solid #004000;
     border-radius: 50px;
     margin: 60px auto 20px auto; 
     cursor: pointer;
     text-align: center;
     display: block;
 }
-button[type="submit"]:hover {
-    background: #ffb300;
+button[type="submit"]:hover,
+button[type="submit"]:focus-visible {
+    background: transparent;
+    border-color: #004000;
     color: #004000;
     box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }

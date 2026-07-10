@@ -28,9 +28,7 @@
         <div class="links">
             <a href="index.html" class="nav-icon house-icon"></a>
             <a href="the-app.html">App</a>
-            <a href="foodX100.html">FoodX100</a>
-            <a href="my-foodX-community.html">FoodXCommunity</a>
-            <a href="cook.html">Cook</a>
+                <a href="coming-soon.html">Coming Soon</a>
             <a href="join-us.html">Join</a>
             <a href="about-us.html" class="current">About</a>
         </div>
@@ -61,12 +59,16 @@
     <div class="fis-container">
         <div class="fis-row">
             <div class="fis-image">
-                <img src="assets/images/about/unity.webp">        
+                <picture>
+                    <source srcset="assets/images/about/unity.webp" type="image/webp">
+                    <img src="assets/images/about/unity.jpg">
+                </picture>
             </div>
             <div class="fis-text-column">
                 <div class="fis-logo-container">
                     <img src="assets/icons/logo/TheFIS-logo.png">
                 </div>
+                <span class="fis-kicker">About the Society</span>
                 <h2>Building a Better Food Future.<br>One We All Own Together.</h2>
                 <p>
                     The Food Investors Society is a Community Benefit Society (CBS); a non-profit, community-owned
@@ -87,7 +89,10 @@
         </p>
 
         <div class="coop-marque">
-            <img src="assets/icons/about_us/coop_marque.webp">
+            <picture>
+                <source srcset="assets/icons/about_us/coop_marque.webp" type="image/webp">
+                <img src="assets/icons/about_us/coop_marque.png">
+            </picture>
         </div>
 
         <h2>Mission</h2>
@@ -108,38 +113,36 @@
             <p>We call this <span class=bold-text>CommonwHealth</span>. Shared wealth, created through good food.</p>
         </p>
 
-        <!-- 
-        ////////////////// STORY /////////////////
-        -->
-        <section class="story">
-            <div class="story-row">
-                <img src="assets/images/about/passion_led_us_here.webp">
-                <div class="story-column">
-                    <h2>Our Story</h2>
-                    <p>
-                        The co-founders came together with the belief that the UK needs a fairer, more transparent
-                        food system. What began as a conversation about ultra-processed foods and public health
-                        grew into a mission to create a platform that supports informed choice, community power, and system change.
-                        <br><br>
-                        Since then, our journey has included:
-                        <ul>
-                            <li>commissioning a full technical discovery</li>
-                            <li>partnering with UK universities to build a proof-of-concept website and app</li>
-                            <li>collaborating with community food networks</li>
-                            <li>engaging public health experts, developers, and behaviour scientists</li>
-                            <li>preparing for a limited market pilot and community share offer</li>
-                        </ul>
-                    </p>
-                    <p>This is just the beginning, and we want people like you to help shape what comes next.</p>
+    </div>
+
+    <!-- 
+    ////////////////// STORY /////////////////
+    -->
+    <section class="story">
+        <div class="story-row">
+            <div class="story-image" aria-hidden="true"></div>
+            <div class="story-column">
+                <h2>Our Story</h2>
+                <p>
+                    The co-founders came together with the belief that the UK needs a fairer, more transparent
+                    food system. What began as a conversation about ultra-processed foods and public health
+                    grew into a mission to create a platform that supports informed choice, community power, and system change.
+                </p>
+                <p>Since then, our journey has included:</p>
+                <ul>
+                    <li>commissioning a full technical discovery</li>
+                    <li>partnering with UK universities to build a proof-of-concept website and app</li>
+                    <li>collaborating with community food networks</li>
+                    <li>engaging public health experts, developers, and behaviour scientists</li>
+                    <li>preparing for a limited market pilot and community share offer</li>
+                </ul>
+                <p>This is just the beginning, and we want people like you to help shape what comes next.</p>
+                <div class="about-join-movement">
+                    <a href="join-us.html" class="join-cta-btn">Join the Movement</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Join the movement - Button --> 
-        <div class="about-join-movement">
-            <a href="join-us.html" class="join-movement-btn">Join the Movement</a>
         </div>
-    </div>
+    </section>
 
 
     <!-- 
@@ -148,11 +151,14 @@
     <section class="founders">
         <div class="column-box-founders">
             <h1>Meet the Founders</h1>
-            <div class="founders-row">
+            <div class="founders-grid">
                 <!-- Fiona -->
                 <div class="founder-card">
                     <div class="profile-crop">
-                        <img src="assets/images/founders_profiles/fiona_pitt.webp" class="profile">
+                        <picture>
+                            <source srcset="assets/images/founders_profiles/fiona_pitt.webp" type="image/webp">
+                            <img src="assets/images/founders_profiles/fiona_pitt.jpg" class="profile">
+                        </picture>
                     </div>
                     <!-- <div class="founder-shadow"></div> -->
                     <p><span class="bold-text">Fiona Pitt</span><br>Executive Director</p>
@@ -162,7 +168,10 @@
                 <!-- Edwina -->
                 <div class="founder-card">
                     <div class="profile-crop">
-                        <img src="assets/images/founders_profiles/edwina_mcguirk.webp" class="profile">    
+                        <picture>
+                            <source srcset="assets/images/founders_profiles/edwina_mcguirk.webp" type="image/webp">
+                            <img src="assets/images/founders_profiles/edwina_mcguirk.jpg" class="profile">
+                        </picture>
                     </div>
                     <!-- <div class="founder-shadow"></div> -->
                     <p><span class="bold-text">Edwina McGuirk</span><br>Finance & Governance Director</p>
@@ -184,15 +193,16 @@
                 <!-- Dani -->
                 <div class="founder-card">
                     <div class="profile-crop">
-                        <img src="assets/images/founders_profiles/dani_waugh.webp" class="profile">
+                        <picture>
+                            <source srcset="assets/images/founders_profiles/dani_waugh.webp" type="image/webp">
+                            <img src="assets/images/founders_profiles/dani_waugh.jpg" class="profile">
+                        </picture>
                     </div>
                     <!-- <div class="founder-shadow"></div> -->
                     <p><span class="bold-text">Dani Waugh</span><br>Information Security Lead</p>
                     <p>7yrs experience as a Chief<br>Information Security Officer</p>
                     <p>Intensely curious with<br>incredible energy and<br>enthusiasm</p>
                 </div>
-            </div>
-            <div class="founders-row">
                 <!-- Lorraine -->
                 <div class="founder-card">
                     <div class="profile-crop">
@@ -202,38 +212,6 @@
                     <p><span class="bold-text">Lorraine Hirst</span><br>Nutritionist (Health-Works CIC)</p>
                     <p>25yrs experience in Public Health</p>
                     <p>Passionate advocate for health equity and psychology-based nutrition</p>
-                </div>
-                <!-- Founder -->
-                <div class="founder-card">
-                    <!-- <div class="profile-crop">
-                        <img src="assets/images/founders_profiles/edwina_mcguirk.webp" class="profile">    
-                    </div> -->
-                    <!-- <div class="founder-shadow"></div> -->
-                    <p><span class="bold-text"></span><br></p>
-                    <p></p>
-                    <p></p>
-                </div>
-                <!-- Founder -->
-                <div class="founder-card">
-                    <!-- <div class="profile-crop">
-                        <div class="profile-circle"></div>
-                        <img src="assets/images/founders_profiles/ruk_cooray.png" class="profile">
-                    </div> -->
-                    <!-- <div class="founder-shadow"></div> -->
-                    <p><span class="bold-text"></span><br></p>
-                    <p></p>
-                    <p></p>
-                </div>
-
-                <!-- Founder -->
-                <div class="founder-card">
-                    <!-- <div class="profile-crop">
-                        <img src="assets/images/founders_profiles/dani_waugh.webp" class="profile">
-                    </div> -->
-                    <!-- <div class="founder-shadow"></div> -->
-                    <p><span class="bold-text"></span><br></p>
-                    <p></p>
-                    <p></p>
                 </div>
             </div>
         </div>
@@ -248,7 +226,6 @@
             <a href="join-us.html">Join the Society</a>
             <a href="about-supporter.html">Become a Supporter</a>
             <a href="about-m3-volunteer.html">Become a Volunteer</a>
-            <a href="my-foodX-community-partners-about.html">Get Your Business Listed in the App</a>
             <a href="donation.html">Donate</a>
         </div>
     </section>
@@ -282,14 +259,15 @@
             <div class="footer-right">
                 <a href="privacy_policy.html" class="footer-link">Privacy Policy</a>
                 <span class="dot"></span>
-                <a href="cookies.html" class="footer-link">Use of Cookies</a>
+                <a href="terms-and-conditions.html" class="footer-link">Terms &amp; Conditions</a>
                 <span class="dot"></span>
-                <a href="business.html" class="footer-link">Business</a>
+                <a href="cookies.html" class="footer-link">Use of Cookies</a>
                 <span class="dot"></span>
                 <a href="contact-us.html" class="footer-link">Contact</a>
             </div>
         </div>
     </footer>
 
+    <script src="js/newsletter.js"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+.hero-section-about {
+    margin-bottom: 0;
+}
+
 .page-wrapper h2 {
     color: #004000;
     font-family: "Inter", sans-serif;
@@ -13,57 +17,84 @@
 
 .fis-container {
     background-color: #e7ebe8;
-    height: 530px;
-    margin-top: -50px;
+    min-height: 560px;
+    margin-top: 0;
     margin-bottom: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
 }
 .fis-row {
-    display: flex;
-    flex-direction: row;
+    position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 560px;
 }
 .fis-image {
-    width: 58%;
+    position: absolute;
+    top: 0;
+    right: -48px;
+    width: 60%;
     height: 100%;
     overflow: hidden;
+    -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
 }
 .fis-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 20% center;
 }
 .fis-text-column {
-    width: 42%;
-    display: flex;
-    flex-direction: column;
-}
-.fis-logo-container {
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
+    min-height: 560px;
+    padding: 72px 58% 72px 72px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+.fis-logo-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 16px;
 }
 .fis-text-column img {
-    padding: 10px;
-    margin-top: 40px;
-    width: 150px;
-    height: 150px;
+    padding: 0;
+    margin-top: 0;
+    width: 96px;
+    height: 96px;
+}
+.fis-kicker {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ffb300;
 }
 .fis-text-column h2 {
     font-size: 30px;
     font-family: "Inter", sans-serif;
     font-weight: 900;
     color: #004000;
-    margin-left: 50px;
+    margin: 0 0 14px;
 }
 .fis-text-column p {
     font-size: 20px;
     font-family: "Work Sans", sans-serif;
     font-weight: 100;
     color: #004000;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 0px;
+    margin: 0;
+    max-width: 520px;
+    line-height: 1.4;
 }
 /* icon shadow */
 .icon-shadow {
@@ -101,68 +132,103 @@
 
 /* join button */
 .about-join-movement {
-    margin-top: 50px;
-    text-align: start;
-    margin-bottom: -120px;
+    margin-top: 32px;
+    text-align: center;
     text-decoration: none;
 }
-.join-movement-btn {
-    background-color: #004000;
-    border-radius: 50px;
-    padding: 18px 35px;
-    color: white;
-    cursor: pointer;
-    transition: 0.1s ease;
-    font-size: 20px;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 700;
-    text-decoration: none;  
-    text-align: center; 
-    margin-top: 0px;
-}
-.join-movement-btn:hover {
-    background: #ffb300;
-    color: #004000;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+.story {
+    margin-top: 80px;
 }
 .story-row {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    min-height: 440px;
+    background-color: #e7ebe8;
 }
-.story-row img {
-    height: 420px;
-    width: 550px;
-    border-radius: 25px;
-    margin-top: 30px;
-    margin-right: 50px;
-    object-position: center;
-    object-fit: cover;
+.story-image {
+    width: 40%;
+    min-height: 440px;
+    background-image: url("../../assets/images/about/passion_led_us_here.jpg");
+    background-image: url("../../assets/images/about/passion_led_us_here.webp");
+    background-size: cover;
+    background-position: center;
+    -webkit-clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+}
+.story-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 80px 50px 40px;
+    box-sizing: border-box;
+}
+.story-column h2 {
+    margin-bottom: 0px;
+    padding-left: 10px;
+    color: #004000;
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+}
+.story-column p,
+.story-column ul {
+    padding-left: 10px;
+}
+.story-column p,
+.story-column ul,
+.story-column li {
+    color: #004000;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+.story-column p,
+.story-column ul {
+    margin-bottom: 0;
+}
+.story-column ul {
+    list-style-position: inside;
+    padding-inline-start: 10px;
+}
+.story-column li {
+    margin-bottom: 6px;
+}
+.story-column .join-cta-btn {
+    background: #004000;
+    color: white;
+    border-color: #004000;
+}
+.story-column .join-cta-btn:hover {
+    background: transparent;
+    color: #004000;
+    border-color: rgba(0, 64, 0, 0.62);
 }
 
 
 /* //////////////// FOUNDERS //////////////// */
 .founders {
-    margin-top: 200px;
+    margin-top: 0;
     padding: 50px 80px;
-    background-color: #e7ebe8;
+    background-color: #ffffff;
 }
 .founders h1 {
-    text-align: center;
+    text-align: left;
     font-family: "Inter", sans-serif;
     font-size: 30px;
     font-weight: 900;
     color: #004000;
     margin-bottom: 50px;
 }
-.founders-row {
-    display: flex;
-    gap: 32px;
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px 32px;
     width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 .founder-card {
-    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,4 +270,27 @@
 .profile-circle {
     background-color: white !important;
     color: #004000 !important;
+}
+
+@media (max-width: 1024px) {
+    .founders {
+        padding: 50px 40px;
+    }
+    .founders-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .founders {
+        padding: 40px 20px;
+        margin-top: 0;
+    }
+    .founders-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .founder-card p {
+        font-size: 18px;
+    }
 }

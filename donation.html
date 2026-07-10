@@ -1,95 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1NH16WM953"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-1NH16WM953');
     </script>
 
     <meta charset="UTF-8" />
-    <title>Donation</title>
+    <title>Donate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" href="assets/icons/favicon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="donation-page">
 
-    <!-- 
-    /////////////////////// TOP NAV ///////////////////////
-    -->
     <nav class="top-nav">
         <div class="container nav-content">
-        <div class="links">
-            <a href="index.html" class="nav-icon house-icon"></a>
-            <a href="the-app.html">App</a>
-            <a href="foodX100.html">FoodX100</a>
-            <a href="my-foodX-community.html">FoodXCommunity</a>
-            <a href="cook.html">Cook</a>
-            <a href="join-us.html">Join</a>
-            <a href="about-us.html">About</a>
-        </div>
+            <div class="links">
+                <a href="index.html" class="nav-icon house-icon"></a>
+                <a href="the-app.html">App</a>
+                <a href="coming-soon.html">Coming Soon</a>
+                <a href="join-us.html">Join</a>
+                <a href="about-us.html">About</a>
+            </div>
         </div>
     </nav>
 
-    <!-- 
-    ///////////////////////// HERO /////////////////////////
-    -->
     <header class="hero-section">
         <div class="container hero-content">
             <div class="hero-left">
-                <!-- <h1 class="small-title">MAKE A</h1> -->
-                <h1 class="big-title">Donation</h1>
-            </div>
-            <!-- Sticky note -->
-            <div class="sticky-stack">
-                <div class="sticky-note note-top">
-                    <b>To do:</b><br>Needs donation form </p>
-                </div>
+                <h1 class="big-title">Support the Movement</h1>
             </div>
             <div class="hero-right">
-                <p>
-                    Invest in a healthier future
-                    <br>Together, we can transform the future of food
-                </p>
-                <img src="assets/icons/other/donate_white.svg" class="icon graph-hero">
+                <p>Help fund a fairer,<br>healthier food future</p>
+                <img src="assets/icons/other/donate_white.svg" class="icon graph-hero" alt="">
             </div>
         </div>
     </header>
 
-    <!-- 
-    ////////////////// DONATION FORM /////////////////
-    -->
-    <section class="donation">
-        <div class="donation-container">
-            <div class="donation-box">
-                <h2>Donation form <span class="donation-form"></span></h2>
+    <div class="page-wrapper">
+        <section class="donation-shell">
+            <div class="donation-copy">
+                <h2>Make a donation</h2>
+                <p>
+                    Support the work behind The Food Investors Society and help us keep building a fairer,
+                    healthier food future.
+                </p>
             </div>
-        </div>
-    </section>
 
-    <!-- 
-    ////////////////// CTA BLACK SECTION //////////////////
-    -->
+            <article class="donation-form-card">
+                <form
+                    class="donation-form"
+                    method="post"
+                    action="https://fis-backend-test-env.eba-phyvw229.eu-west-2.elasticbeanstalk.com/api/enrolment/donations/create-checkout/"
+                    data-prod-action="https://fis-backend-test-env.eba-phyvw229.eu-west-2.elasticbeanstalk.com/api/enrolment/donations/create-checkout/"
+                    data-local-action="http://127.0.0.1:8000/api/enrolment/donations/create-checkout/"
+                >
+                    <fieldset class="donation-fieldset donation-amounts">
+                        <legend>Amount</legend>
+                        <div class="donation-amount-grid">
+                            <label class="donation-amount-option">
+                                <input type="radio" name="donation-amount" value="5">
+                                <span>£5</span>
+                            </label>
+                            <label class="donation-amount-option">
+                                <input type="radio" name="donation-amount" value="10">
+                                <span>£10</span>
+                            </label>
+                            <label class="donation-amount-option">
+                                <input type="radio" name="donation-amount" value="25">
+                                <span>£25</span>
+                            </label>
+                            <label class="donation-amount-option">
+                                <input type="radio" name="donation-amount" value="50">
+                                <span>£50</span>
+                            </label>
+                            <label class="donation-amount-option">
+                                <input type="radio" name="donation-amount" value="100">
+                                <span>£100</span>
+                            </label>
+                            <label class="donation-amount-option donation-amount-other">
+                                <input type="radio" name="donation-amount" value="other" checked>
+                                <span>Other</span>
+                            </label>
+                        </div>
+
+                        <div class="form-field custom-donation-field">
+                            <label for="custom-donation-amount">Other amount</label>
+                            <input id="custom-donation-amount" name="custom-donation-amount" type="number" min="1" step="0.01" placeholder="£ Enter amount" disabled>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="donation-fieldset">
+                        <legend>Your details</legend>
+                        <div class="form-row two-up">
+                            <div class="form-field">
+                                <label for="full-name">Full name</label>
+                                <input id="full-name" name="full-name" type="text" autocomplete="name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Email address</label>
+                                <input id="email" name="email" type="email" autocomplete="email" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="donation-form-actions">
+                        <p class="helper-text">You’ll continue securely to Stripe to complete your payment.</p>
+                        <button type="submit" class="donation-pay-btn">Continue to payment</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </div>
+
     <section class="newsletter-section">
         <div class="container">
             <h2>Like What We Are Doing? Join the Movement!</h2>
             <a href="join-us.html">Join the Society</a>
             <a href="about-supporter.html">Become a Supporter</a>
             <a href="about-m3-volunteer.html">Become a Volunteer</a>
-            <a href="my-foodX-community-partners-about.html">Get Your Business Listed in the App</a>
             <a href="donation.html">Donate</a>
         </div>
     </section>
 
-    <!-- 
-    /////////////////////// SOCIAL ///////////////////////
-    -->
     <section class="social-section">
         <div class="social-icons">
             <h2><b>Stay Connected</b></h2>
@@ -105,9 +143,6 @@
         </div>
     </section>
 
-    <!--
-    /////////////////////// FOOTER ///////////////////////
-    -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-left">
@@ -116,14 +151,16 @@
             <div class="footer-right">
                 <a href="privacy_policy.html" class="footer-link">Privacy Policy</a>
                 <span class="dot"></span>
-                <a href="cookies.html" class="footer-link">Use of Cookies</a>
+                <a href="terms-and-conditions.html" class="footer-link">Terms &amp; Conditions</a>
                 <span class="dot"></span>
-                <a href="business.html" class="footer-link">Business</a>
+                <a href="cookies.html" class="footer-link">Use of Cookies</a>
                 <span class="dot"></span>
                 <a href="contact-us.html" class="footer-link">Contact</a>
             </div>
         </div>
     </footer>
 
+    <script src="js/newsletter.js"></script>
+    <script src="js/donation.js"></script>
 </body>
 </html>

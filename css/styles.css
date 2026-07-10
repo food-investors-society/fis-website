@@ -11,7 +11,6 @@
 @import url("components/social.css");
 @import url("components/footer.css");
 @import url("components/page-wrapper.css");
-@import url("components/sticky-note.css");
 
 /* 
 -------------------------------------------------
@@ -35,9 +34,6 @@ Important: all the above html pages share a common css
 @import url("pages/app-features.css");
 
 
-/* FOODX MY COMMUNITY */
-@import url("pages/my-foodx-community.css");
-
 /* COOK */
 @import url("pages/cook.css");
 
@@ -46,14 +42,569 @@ Important: all the above html pages share a common css
 
 /* MEMBERSHIPS */
 @import url("pages/sign-form-memberships.css");
-@import url("pages/supporter.css");
 
 
 /* MISC */
 @import url("pages/contact.css");
 @import url("pages/donation.css");
 @import url("pages/about-us.css");
+@import url("pages/coming-soon.css");
 @import url("pages/privacy-policy.css");
+@import url("pages/terms-and-conditions.css");
 @import url("pages/cookies.css");
 @import url("pages/business.css");
 @import url("pages/faq.css");
+
+/*
+-------------------------------------------------
+--------------- Responsive Layer ----------------
+-------------------------------------------------
+*/
+
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .page-wrapper,
+    .newsletter-section,
+    .social-section,
+    .post-social-links-section,
+    .main-footer,
+    .database-container,
+    .map-container,
+    .cook-container {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .hero-content,
+    .challenge-box h2,
+    .challenge-box p,
+    .carousel-header h1,
+    .features-slider-header h1,
+    .testimonials-header h1,
+    .testimonials-header p,
+    .download-app,
+    .animation-text,
+    .supporter-header-box h1 {
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+
+    .get-the-app {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .phone-screen-box .row,
+    .try-features,
+    .slide,
+    .community-partners-row,
+    .local-food-matters-row,
+    .map-feature {
+        gap: 40px;
+    }
+
+    .slide {
+        min-height: 0;
+        height: auto;
+        padding: 64px 48px;
+    }
+
+    .feature-left,
+    .feature-right,
+    .hero-phone-wrapper,
+    .logo-icon-wrapper .phone-mockup-the-app,
+    .row-buttons,
+    .phone-preview,
+    .feature-left img,
+    .shop-smarter-graphic {
+        margin-left: 0;
+    }
+
+    .cta-split-panel {
+        padding-right: 180px;
+    }
+
+    .graphic-wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-wrapper,
+    .newsletter-section,
+    .social-section,
+    .post-social-links-section,
+    .main-footer,
+    .database-container,
+    .map-container,
+    .cook-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .main-footer .container,
+    .newsletter-input-row,
+    .phone-screen-box .row,
+    .buttons-row-foodx100,
+    .community-partners-row,
+    .local-food-matters-row,
+    .get-the-app2-row,
+    .download-buttons,
+    .download-app .row,
+    .try-features,
+    .slide,
+    .feature-top-row,
+    .map-feature,
+    .row-buttons,
+    .filter-row,
+    .filter-skill-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-footer .container,
+    .download-note,
+    .social-icons-row,
+    .right-controls,
+    .toggle,
+    .filters,
+    .top-planned-row,
+    .planned-platforms {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .main-footer .container {
+        gap: 16px;
+    }
+
+    .footer-right {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .main-footer .dot {
+        display: none;
+    }
+
+    .hero-content,
+    .challenge-box h2,
+    .challenge-box p,
+    .carousel-header h1,
+    .features-slider-header h1,
+    .testimonials-header h1,
+    .testimonials-header p,
+    .download-app,
+    .animation-text,
+    .supporter-header-box h1 {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .main-text-home {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .trade-eat-live,
+    .challenge-box,
+    .the-app-box,
+    .app-features-try,
+    .problem-cards-wrapper,
+    .join-society,
+    .supporters,
+    .foodx100-bigger-mission {
+        margin-top: 56px;
+        margin-bottom: 56px;
+    }
+
+    .trade-eat-live h2,
+    .challenge-box h2,
+    .the-app-box h2,
+    .cta-split-intro h2,
+    .join-society h1,
+    .problem-cards-hover-title,
+    .animation-text h2,
+    .features-slider-header h1,
+    .testimonials-header h1,
+    .supporter-header-box h1,
+    .download-app .column h1,
+    .foodx100-wrapper h2,
+    .database-container h2,
+    .map-container h2,
+    .community-partners-wrapper .community-partners-card h2,
+    .community-partners-wrapper .community-partners-card h3 {
+        font-size: 26px;
+        line-height: 1.1;
+    }
+
+    .trade-eat-live p,
+    .challenge-box p,
+    .the-app-box p,
+    .cta-split-intro p,
+    .cta-split-panel p,
+    .app-coming-copy,
+    .feature-item p,
+    .problem-cards-container p,
+    .download-app .column p,
+    .foodx100-wrapper p,
+    .foodx100-database p,
+    .foodx-community-container p,
+    .local-food-matters-column p,
+    .community-partners-card p,
+    .cook-container p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .cta-split-panel {
+        min-height: 0;
+        padding: 24px;
+    }
+
+    .cta-split-panel h3 {
+        font-size: 26px;
+    }
+
+    .cta-split-image {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        margin-top: 12px;
+        border-radius: 24px;
+        clip-path: none;
+        box-shadow: none;
+    }
+
+    .challenge-box {
+        margin-bottom: 0;
+    }
+
+    .video-container {
+        padding: 32px 24px 0;
+    }
+
+    .graphic-wrapper,
+    .price-comparison-diagram,
+    .meals-diagram,
+    .recipes_hacks,
+    .community-diagram {
+        height: auto;
+        min-height: 0;
+        padding-bottom: 24px;
+    }
+
+    .scoring-wrapper,
+    .graphic,
+    .graphic2,
+    .graphic3,
+    .graphic4,
+    .graphic5,
+    .price-comparison-graphic,
+    .shop-smarter-graphic,
+    .cook-easy-graphic,
+    .neighbourhood-wrapper {
+        min-width: max-content;
+    }
+
+    .get-the-app {
+        padding: 0 24px;
+    }
+
+    .phone-preview {
+        width: min(100%, 340px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 48px auto 16px;
+    }
+
+    .phone-screen-box .left-phone-screen {
+        width: 100%;
+        height: auto;
+    }
+
+    .phone-concept-screen {
+        top: 13%;
+        left: 29%;
+        width: 41%;
+        height: 73%;
+    }
+
+    .phone-screen-box .row .right-column {
+        margin-top: 0;
+        margin-bottom: 48px;
+    }
+
+    .get-the-app .icon {
+        width: 72px;
+        height: 72px;
+        margin-right: 0;
+    }
+
+    .row-buttons,
+    .buttons-row-foodx100,
+    .download-buttons,
+    .discover-app,
+    .try-it-app {
+        gap: 12px;
+        width: 100%;
+    }
+
+    .discover-btn,
+    .open-btn,
+    .try-it-btn,
+    .join-cta-btn,
+    .become-founder-btn,
+    .early-access-btn,
+    .sign-up-btn,
+    .open-faq-btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .animation-text {
+        padding-top: 8px;
+        margin-top: 0;
+    }
+
+    .animation-text h2 {
+        font-size: 40px;
+    }
+
+    .animation-text h3 {
+        margin-top: 0;
+        font-size: 22px;
+    }
+
+    .logo-icon-wrapper {
+        margin-top: 0;
+        padding: 0 24px;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .logo-icons {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+    .main-logo {
+        width: 140px;
+        margin-top: 0;
+        margin-left: 0;
+        transform: none;
+    }
+
+    .logo-icon-wrapper .icons-row,
+    .logo-icon-wrapper.animate .icons-row {
+        margin-left: 0;
+        margin-top: 0;
+        flex-wrap: wrap;
+        visibility: visible;
+    }
+
+    .logo-icon-wrapper .icons-row img,
+    .logo-icon-wrapper.animate .icons-row img,
+    .logo-icon-wrapper.animate .main-logo {
+        opacity: 1;
+        transform: none;
+    }
+
+    .hero-phone-wrapper,
+    .logo-icon-wrapper .phone-mockup-the-app {
+        width: min(100%, 320px);
+        margin-top: 0;
+    }
+
+    .logo-icon-wrapper .phone-mockup-the-app img {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .phone-shadow-the-app-page {
+        width: 80%;
+        bottom: -30px;
+    }
+
+    .floating-download-buttons {
+        position: static;
+        left: auto;
+        top: auto;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .floating-download-buttons .download-column h2,
+    .download-buttons .download-column h2 {
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+
+    .problems-solutions-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        overflow: visible;
+    }
+
+    .problems-solutions-card {
+        min-height: 280px;
+    }
+
+    .slide {
+        padding: 56px 24px;
+        gap: 28px;
+    }
+
+    .feature-left,
+    .feature-right,
+    .right-column,
+    .phone-stack {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .feature-left img,
+    .phone-stack {
+        max-width: 320px;
+        height: auto;
+    }
+
+    .feature-right {
+        margin-left: 0;
+    }
+
+    .feature-top-row h2 {
+        font-size: 30px;
+    }
+
+    .feature-subheader,
+    .feature-bulletpoints,
+    .feature-bulletpoints li,
+    .bubble p,
+    .feature-item h2,
+    .feature-item p {
+        font-size: 18px !important;
+    }
+
+    .features-slider-header h1,
+    .carousel-header h1,
+    .testimonials-header h1 {
+        margin-left: 24px;
+    }
+
+    .try-features {
+        gap: 32px;
+        padding: 32px 24px;
+    }
+
+    .right-column {
+        gap: 16px;
+    }
+
+    .supporters {
+        height: auto;
+    }
+
+    .supporters-carousel {
+        padding: 10px 24px 20px;
+    }
+
+    .community-partners-row a,
+    .community-partners-card {
+        width: 100%;
+    }
+
+    .community-partners-card {
+        height: auto;
+        padding: 24px;
+    }
+
+    .community-partner-card-text-wrapper {
+        height: auto;
+    }
+
+    .local-food-matters-row img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .cook-container {
+        height: auto;
+        padding-top: 32px;
+        padding-bottom: 48px;
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .toggle-btn {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-nav {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .top-nav .links {
+        gap: 8px;
+    }
+
+    .top-nav .links a {
+        font-size: 13px;
+        padding: 6px 7px;
+    }
+
+    .trade-eat-live h2,
+    .challenge-box h2,
+    .the-app-box h2,
+    .join-society h1,
+    .animation-text h2,
+    .floating-download-buttons .download-column h2,
+    .download-buttons .download-column h2 {
+        font-size: 22px;
+    }
+
+    .animation-text h3 {
+        font-size: 20px;
+    }
+
+    .problem-text,
+    .solution-text,
+    .label-problem,
+    .label-solution {
+        width: 82%;
+    }
+
+    .phone-concept-body h3 {
+        font-size: 18px;
+    }
+
+    .phone-concept-body p,
+    .phone-concept-pills span {
+        font-size: 12px;
+    }
+}

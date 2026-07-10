@@ -27,14 +27,21 @@
             <img src="assets/icons/thank_you/x.png" class="icon thank-you">
             <h1 id="title">Payment Cancelled</h1>
         </div>
-        <p id="message">Your payment was not completed and no charges have been made.</p>
-        <p id="message">If this was a mistake, you can try again using the button below.</p>
+        <p id="message-primary">Your payment was not completed and no charges have been made.</p>
+        <p id="message-secondary">If this was a mistake, you can try again using the button below.</p>
 
         <div class="row-payment-buttons">
-            <a href="membership.html" class="button">Try Again</a>
+            <a href="membership.html" class="button" id="retry-link">Try Again</a>
             <a href="index.html" class="button">Go to Homepage</a>
         </div>
     </div>
 
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("source") === "donation") {
+            document.getElementById("message-secondary").textContent = "If this was a mistake, you can try your donation again using the button below.";
+            document.getElementById("retry-link").setAttribute("href", "donation.html");
+        }
+    </script>
 </body>
 </html>

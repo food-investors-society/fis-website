@@ -76,6 +76,8 @@
 /* Early access button */
 .early-access-btn {
     background-color: #004000;
+    border: 2px solid transparent;
+    box-sizing: border-box;
     border-radius: 50px;
     padding: 18px 35px;
     color: white;

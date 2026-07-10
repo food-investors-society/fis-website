@@ -1,0 +1,38 @@
+.footer-terms .container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+}
+
+.footer-terms .hero-left .big-title {
+    font-size: 24px;
+}
+
+.footer-terms .legal-updated {
+    font-family: "Work Sans", sans-serif;
+    font-size: 18px;
+    color: #004000;
+    margin: 0 0 24px 0;
+}
+
+.footer-terms .container .row {
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-terms .container h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    color: #004000;
+}
+
+.footer-terms .container .row-right,
+.footer-terms .container .row-left {
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    width: 50%;
+    color: #004000;
+}

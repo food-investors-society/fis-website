@@ -18,7 +18,7 @@
     <link rel="icon" href="assets/icons/favicon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="app-page">
 
     <!-- 
     /////////////////////// TOP NAV ///////////////////////
@@ -28,9 +28,7 @@
             <div class="links">
                 <a href="index.html" class="nav-icon house-icon"></a>
                 <a href="the-app.html" class="current">App</a>
-                <a href="foodX100.html">FoodX100</a>
-                <a href="my-foodX-community.html">FoodXCommunity</a>
-                <a href="cook.html">Cook</a>
+                <a href="coming-soon.html">Coming Soon</a>
                 <a href="join-us.html">Join</a>
                 <a href="about-us.html">About</a>
             </div>
@@ -62,9 +60,8 @@
     ///////////////////// ANIMATIONS //////////////////////
     -->
     <section class="animation-text">
-        <h2>Your Go-To App for Better Everyday Eating</h2>
+        <h2>Your Go-To<br>App for Better<br>Everyday Eating</h2>
         <h3>Make good food choices with less effort</h3>
-        <h4>Get the App</h4>
     </section>
     <section class="logo-icon-wrapper">
         <div class="logo-icons">
@@ -89,14 +86,11 @@
             
             <div class="floating-download-buttons">
                 <div class="download-column">
-                    <h2>Coming Soon on App Store & Google Play.</h2>
-                    <div class="download-row">
-                        <a href="#">
-                            <img src="assets/icons/home/apple_store_black.svg" class="floating-store">
-                        </a>
-                        <a href="#">
-                            <img src="assets/icons/home/google_play_store_black.svg" class="floating-store play-store">
-                        </a>
+                    <h2 class="top-planned-copy">Coming Soon on App Store & Google Play.</h2>
+                    <div class="planned-platforms top-planned-row">
+                        <span class="planned-platform">Planned for iOS</span>
+                        <span class="planned-platform">Planned for Android</span>
+                        <button class="planned-notify-btn" type="button" data-open-notify-modal><svg class="planned-notify-bell" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22a2.6 2.6 0 0 0 2.43-1.67h-4.86A2.6 2.6 0 0 0 12 22Zm7-5.33h-1.33V10.9A5.72 5.72 0 0 0 13.67 5.5V4.67a1.67 1.67 0 1 0-3.34 0v.83A5.72 5.72 0 0 0 6.33 10.9v5.77H5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2Z"/></svg><span>Notify me</span></button>
                     </div>
                 </div>
             </div>
@@ -109,97 +103,75 @@
     <div class="carousel-header">
         <h1>Everything You Need in One Place</h1>
     </div>
-    <section class="features-carousel">
-        <div class="carousel-track">
-            <div class="carousel-spacer"></div>
-            <!-- FOODX -->
-            <div class="feature-card">                    
-                <div class="column">
-                    <div class="icon-wrapper">
-                        <img src="assets/icons/the_app/foodx.svg">
+    <section class="features-carousel feature-banner-carousel" data-marquee data-marquee-speed="45">
+        <div class="carousel-track feature-banner-track" data-marquee-track>
+            <div class="carousel-group" data-marquee-group>
+                <!-- FOODX -->
+                <div class="feature-card">                    
+                    <div class="column">
+                        <div class="icon-wrapper">
+                            <img src="assets/icons/the_app/foodx.svg" alt="">
+                        </div>
+                        <h3>FoodX</h3>
+                        <p>Get quick food insights and better choice swap ideas</p>
                     </div>
-                    <h3>FoodX</h3>
-                    <p>Get quick food insights and better choice swap ideas</p>
+                </div>
+
+                <!-- MY LIST -->
+                <div class="feature-card">                   
+                    <div class="column">
+                        <div class="icon-wrapper">
+                            <img src="assets/icons/the_app/my_list.svg" alt="">
+                        </div>
+                        <h3>My List</h3>
+                        <p>Save items you want to buy and compare prices by retailer</p>
+                    </div>
+                </div>
+
+                <!-- MEAL PLANS -->
+                <div class="feature-card">
+                    <div class="column">
+                        <div class="icon-wrapper">
+                            <img src="assets/icons/the_app/cook_meal_plans.svg" alt="">
+                        </div>
+                        <h3>Meal Plans</h3>
+                        <p>Generate simple, tailored weekly meal plans instantly</p>
+                    </div>
+                </div>
+
+                <!-- RECIPES & HACKS -->
+                <div class="feature-card">
+                    <div class="column">
+                        <div class="icon-wrapper">
+                            <img src="assets/icons/the_app/cook_recipes_hacks.svg" alt="">
+                        </div>
+                        <h3>Recipes & Cooking Hacks</h3>
+                        <p>Explore quick recipes and tips for easier cooking</p>
+                    </div>
+                </div>
+
+                <!-- MY SPACES -->
+                <div class="feature-card">                   
+                    <div class="column">
+                        <div class="icon-wrapper">
+                            <img src="assets/icons/the_app/pantry_my_spaces.svg" alt="">
+                        </div>
+                        <h3>My Spaces & Items</h3>
+                        <p>Organise your food spaces and manage what you have</p>
+                    </div>
+                </div>
+
+                <!-- MY NEIGHBOURHOOD -->
+                <div class="feature-card">
+                    <div class="column">
+                        <div class="icon-wrapper">
+                            <img src="assets/icons/home/my_community_green.svg" alt="">
+                        </div>
+                        <h3>My FoodX Community</h3>
+                        <p>Explore good food places and community activity near you</p>
+                    </div>
                 </div>
             </div>
-
-            <!-- MY LIST -->
-            <div class="feature-card">                   
-                <div class="column">
-                    <div class="icon-wrapper">
-                        <img src="assets/icons/the_app/my_list.svg">
-                    </div>
-                    <h3>My List</h3>
-                    <p>Save items you want to buy and compare prices by retailer</p>
-                </div>
-            </div>
-
-            <!-- MEAL PLANS -->
-            <div class="feature-card">
-                <div class="column">
-                    <div class="icon-wrapper">
-                        <img src="assets/icons/the_app/cook_meal_plans.svg">
-                    </div>
-                    <h3>Meal Plans</h3>
-                    <p>Generate simple, tailored weekly meal plans instantly</p>
-                </div>
-            </div>
-
-            <!-- RECIPES & HACKS -->
-            <div class="feature-card">
-                <div class="column">
-                    <div class="icon-wrapper">
-                        <img src="assets/icons/the_app/cook_recipes_hacks.svg">
-                    </div>
-                    <h3>Recipes & Cooking Hacks</h3>
-                    <p>Explore quick recipes and tips for easier cooking</p>
-                </div>
-            </div>
-
-            <!-- MY SPACES -->
-            <div class="feature-card">                   
-                <div class="column">
-                    <div class="icon-wrapper">
-                        <img src="assets/icons/the_app/pantry_my_spaces.svg">
-                    </div>
-                    <h3>My Spaces & Items</h3>
-                    <p>Organise your food spaces and manage what you have</p>
-                </div>
-            </div>
-
-            <!-- WASTE -->
-            <!-- <div class="feature-card">
-                <div class="column">
-                    <div class="icon-wrapper">
-                        <img src="assets/icons/the_app/pantry_waste.svg">
-                    </div>
-                    <h3>Waste</h3>
-                    <p>Cut waste by tracking what expires soon</p>
-                </div>
-            </div> -->
-
-            <!-- MY NEIGHBOURHOOD -->
-            <div class="feature-card">
-                <div class="column">
-                    <div class="icon-wrapper">
-                        <img src="assets/icons/home/my_community_green.svg">
-                    </div>
-                    <h3>My FoodX Community</h3>
-                    <p>Explore good food places and community activity near you</p>
-                </div>
-            </div>
-
-            <!-- MY GROUPS -->
-            <!-- <div class="feature-card">
-                <div class="column">
-                    <div class="icon-wrapper">
-                        <img src="assets/icons/the_app/foodx_community_my_groups.svg">
-                    </div>
-                    <h3>My Groups</h3>
-                    <p>Join food communities and share what matters to you</p>
-                </div>
-            </div> -->
-            <div class="carousel-spacer"></div>
         </div>
     </section>
 
@@ -221,6 +193,7 @@
                     <br>
                     If any of these feel familiar, hover over the card to see how foodXchange can help.
                 </p>
+                <h3 class="problem-cards-hover-title">Hover Over The Cards</h3>
                 <div class="problems-solutions-grid">
                     <!-- problem 1 -->
                     <div class="problems-solutions-card hover-hint">
@@ -279,13 +252,10 @@
                 <div class="download-buttons">
                     <div class="download-column">
                         <h2>Coming Soon on App Store & Google Play.</h2>
-                        <div class="download-row">
-                            <a href="#">
-                                <img src="assets/icons/home/apple_store_black.svg" class="floating-store">
-                            </a>
-                            <a href="#">
-                                <img src="assets/icons/home/google_play_store_black.svg" class="floating-store play-store">
-                            </a>
+                        <div class="planned-platforms">
+                            <span class="planned-platform">Planned for iOS</span>
+                            <span class="planned-platform">Planned for Android</span>
+                            <button class="planned-notify-btn" type="button" data-open-notify-modal><svg class="planned-notify-bell" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22a2.6 2.6 0 0 0 2.43-1.67h-4.86A2.6 2.6 0 0 0 12 22Zm7-5.33h-1.33V10.9A5.72 5.72 0 0 0 13.67 5.5V4.67a1.67 1.67 0 1 0-3.34 0v.83A5.72 5.72 0 0 0 6.33 10.9v5.77H5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2Z"/></svg><span>Notify me</span></button>
                         </div>
                     </div>
                 </div>
@@ -678,44 +648,6 @@
     <!-- 
     //////////////// TRY THE FEATURES ////////////////
     -->
-    <section class="try-features">
-        <!-- <input type="radio" name="feature" id="f0" checked>
-        <input type="radio" name="feature" id="f1">
-        <input type="radio" name="feature" id="f2"> -->
-
-        <div class="phone-stack">
-            <img src="assets/icons/the_app/app_screenshot_scanning.png" class="phone-screen active" data-screen="0">
-            <img src="assets/icons/the_app/app_screenshot_neighbourhood.png" class="phone-screen" data-screen="1">
-            <img src="assets/icons/the_app/app_screenshot_recipes.png" class="phone-screen" data-screen="2">
-        </div>
-
-        <div class="right-column">
-            <h1>Try the Online Taster Features:</h1>
-
-            <button class="bubble active" data-target="0">
-                <h3>FoodX100</h3>
-                <p>Get the best-priced minimally processed foods</p>
-            </button>
-
-            <button class="bubble" data-target="1">
-                <h3>FoodX Community</h3>
-                <p>Your local guide to good food</p>
-            </button>
-
-            <button class="bubble" data-target="2">
-                <h3>Cook</h3>
-                <p>Explore our simple, quick recipes and cooking hacks</p>
-            </button>
-
-            <!-- try the selected feature --> 
-            <div class="try-it">
-                <a data-link="0" href="foodX100.html" class="try-link try-it-btn active">Try it</a>
-                <a data-link="1" href="my-foodX-community.html" class="try-link try-it-btn">Try it</a>
-                <a data-link="2" href="cook.html" class="try-link try-it-btn">Try it</a>
-            </div>
-        </div>
-    </section>
-
     <div class="page-wrapper">
         <!-- Part of a Bigger Mission -->
         <div class="foodx100-bigger-mission">
@@ -725,20 +657,14 @@
                 <br>Every feature, tool, and future development is guided by people like you and not by corporate agendas.
             </p>   
 
-            <h2>Be a Founder of the Future App</h2>
+            <h2>Join the Society for Early Access</h2>
             <p>
-                You can help shape the app by joining the Society, becoming a
-                <br>Pioneer Share investor, or joining the Founders List for early trials.
+                You can help shape the app by joining the Society and taking part in
+                <br>early trials, feedback opportunities, and future member updates.
             </p>   
             <div class="buttons-row-foodx100">
-                <!-- Be a foodXchange founder - Button --> 
-                <div class="foodx100-foodXchange-founder">
-                    <a href="about-m8-share-owner.html" class="become-founder-btn">Be a foodXchange Founder</a>
-                </div>
-                <br>
-                <!-- Get Early Access - Button --> 
                 <div class="foodx100-early-access">
-                    <a href="#" class="early-access-btn">Get Early Access</a>
+                    <a href="join-us.html" class="early-access-btn">Get Early Access</a>
                 </div>
             </div>
         </div>
@@ -819,13 +745,10 @@
                 <div class="download-buttons">
                     <div class="download-column">
                         <h2>Coming Soon on App Store & Google Play.</h2>
-                        <div class="download-row">
-                            <a href="#">
-                                <img src="assets/icons/home/apple_store_black.svg" class="floating-store">
-                            </a>
-                            <a href="#">
-                                <img src="assets/icons/home/google_play_store_black.svg" class="floating-store play-store">
-                            </a>
+                        <div class="planned-platforms">
+                            <span class="planned-platform">Planned for iOS</span>
+                            <span class="planned-platform">Planned for Android</span>
+                            <button class="planned-notify-btn" type="button" data-open-notify-modal><svg class="planned-notify-bell" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22a2.6 2.6 0 0 0 2.43-1.67h-4.86A2.6 2.6 0 0 0 12 22Zm7-5.33h-1.33V10.9A5.72 5.72 0 0 0 13.67 5.5V4.67a1.67 1.67 0 1 0-3.34 0v.83A5.72 5.72 0 0 0 6.33 10.9v5.77H5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2Z"/></svg><span>Notify me</span></button>
                         </div>
                     </div>
                 </div>
@@ -842,7 +765,6 @@
             <a href="join-us.html">Join the Society</a>
             <a href="about-supporter.html">Become a Supporter</a>
             <a href="about-m3-volunteer.html">Become a Volunteer</a>
-            <a href="my-foodX-community-partners-about.html">Get Your Business Listed in the App</a>
             <a href="donation.html">Donate</a>
         </div>
     </section>
@@ -865,6 +787,26 @@
         </div>
     </section>
 
+    <div class="notify-modal" id="notify-modal" hidden>
+        <div class="notify-modal-backdrop" data-close-notify-modal></div>
+        <div class="notify-modal-panel" role="dialog" aria-modal="true" aria-labelledby="notify-modal-title">
+            <button class="notify-modal-close" type="button" aria-label="Close notify modal" data-close-notify-modal>×</button>
+            <h2 id="notify-modal-title">Notify me when the app is ready</h2>
+            <p>Enter your email to be notified when the app is ready.</p>
+            <form class="notify-modal-form" data-notify-modal-form>
+                <input
+                    class="notify-modal-input"
+                    type="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+                <button class="notify-modal-submit" type="submit">Notify me</button>
+            </form>
+        </div>
+    </div>
+
     <!--
     /////////////////////// FOOTER ///////////////////////
     -->
@@ -876,9 +818,9 @@
             <div class="footer-right">
                 <a href="privacy_policy.html" class="footer-link">Privacy Policy</a>
                 <span class="dot"></span>
-                <a href="cookies.html" class="footer-link">Use of Cookies</a>
+                <a href="terms-and-conditions.html" class="footer-link">Terms &amp; Conditions</a>
                 <span class="dot"></span>
-                <a href="business.html" class="footer-link">Business</a>
+                <a href="cookies.html" class="footer-link">Use of Cookies</a>
                 <span class="dot"></span>
                 <a href="contact-us.html" class="footer-link">Contact</a>
             </div>
@@ -889,6 +831,8 @@
     <script src="js/animation.js"></script>
     <script src="js/screenshot_switch.js"></script>
     <script src="js/carousel_auto_scroll.js"></script>
+    <script src="js/app_notify.js"></script>
 
+    <script src="js/newsletter.js"></script>
 </body>
 </html>

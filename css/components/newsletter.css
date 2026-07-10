@@ -1,6 +1,6 @@
 .newsletter-section {
     position: relative;
-    background: black;
+    background: #09160e;
     color: white;
     padding-top: 20px;
     padding-right: 80px;
@@ -24,8 +24,49 @@
     color: #ffb300;
 }
 
+.newsletter-copy h2 {
+    font-size: 20px;
+}
+
+.newsletter-input-row {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.newsletter-input {
+    width: 90px;
+    max-width: 100%;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 0 14px;
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.newsletter-submit {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    box-sizing: border-box;
+    padding: 0 18px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.newsletter-submit:hover {
+    background: transparent !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
 .newsletter-section *::selection {
-    background: #333;     /* same black-ish so no leak is visible */
+    background: #14281a;
     color: white;
 }
 

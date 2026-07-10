@@ -2,27 +2,38 @@
     color: #ffb300;
 }
 .hero-section {
-    background-color: #004000;
+    background:
+        radial-gradient(circle at 108% -8%, rgba(255, 179, 0, 0.6), transparent 36%),
+        /* radial-gradient(circle at 18% 18%, rgba(255, 196, 64, 0.18), transparent 24%), */
+        linear-gradient(135deg, #004000 0%, #0c4e1b 40%, #004000 72%, #0d3317 100%);
     overflow: visible;
-    height: 80px; 
+    min-height: 60px;
+    padding-top: 6px;
+    padding-bottom: 0;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 38px;
 }
 .hero-section-app {
-    background-color: #004000;
+    background:
+        radial-gradient(circle at 108% -8%, rgba(255, 179, 0, 0.6), transparent 36%),
+        /* radial-gradient(circle at 18% 18%, rgba(255, 196, 64, 0.18), transparent 24%), */
+        linear-gradient(135deg, #004000 0%, #0c4e1b 40%, #004000 72%, #0d3317 100%);
     overflow: visible;
-    height: 80px; 
+    min-height: 60px;
+    padding-top: 6px;
+    padding-bottom: 0;
     align-items: center;
 }
 .hero-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-left: 80px;
     margin-right: 80px;
 }
 .hero-left img {
-    width: 140px;
-    height: 140px;
+    width: 13px;
+    height: 13px;
 }
 .hero-left h1 {
     margin: 0;
@@ -30,21 +41,20 @@
 }
 .hero-left .big-title {
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 900;
     font-family: "Inter", sans-serif;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    margin: 0;
+    line-height: 1;
 }
 .hero-right {
-    margin-top: 2px;
-    margin-bottom: 10px;
+    margin: 0;
     text-align: right;
     max-width: 600px;
     display: flex;
     gap: 15px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .hero-right img {
     width: 40px;
@@ -56,27 +66,7 @@
     font-family: "IBM Plex Mono", monospace;
     font-size: 18px;
     font-weight: 100;
-}
-/* Home page only layout */
-.hero-right .hero-home {
-    margin-bottom: 26px;
-    display: flex;
-    text-align: right;
-    max-width: 600px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    justify-content: space-between;
-}
-.hero-right .hero-home img {
-    width: 40px;
-    height: 40px;
-    color: white;
-}
-.hero-right .hero-home p {
-    color: white;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 18px;
+    margin: 0;
 }
 
 

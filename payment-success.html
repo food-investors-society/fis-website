@@ -27,12 +27,21 @@
             <img src="assets/icons/thank_you/tick.png" class="icon thank-you">
             <h1 id="title">Payment Succeeded</h1>
         </div>
-        <p id="message">Thank you for your payment. Your membership application has been received and is now being processed.</p>
-        <p id="message">You will receive a confirmation email shortly once your enrolment has been reviewed and approved.</p>
-        <p id="message">If you do not receive an email within 24 hours, please contact us at <strong>thefoodinvestorssociety@gmail.com</strong>.</p>
+        <p id="message-primary">Thank you for your payment. Your membership application has been received and is now being processed.</p>
+        <p id="message-secondary">You will receive a confirmation email shortly once your enrolment has been reviewed and approved.</p>
+        <p id="message-tertiary">If you do not receive an email within 24 hours, please contact us at <strong>thefoodinvestorssociety@gmail.com</strong>.</p>
 
         <a href="index.html" class="button">Go to Homepage</a>
     </div>
 
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("source") === "donation") {
+            document.getElementById("title").textContent = "Donation Received";
+            document.getElementById("message-primary").textContent = "Thank you for your donation. Your payment has been completed successfully.";
+            document.getElementById("message-secondary").textContent = "We appreciate your support for The Food Investors Society.";
+            document.getElementById("message-tertiary").innerHTML = 'A confirmation will be sent to your email address. If you need help, contact us at <strong>thefoodinvestorssociety@gmail.com</strong>.';
+        }
+    </script>
 </body>
 </html>

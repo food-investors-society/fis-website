@@ -1,9 +1,42 @@
 .social-section {
-    background-color: black;
-    padding-top: 20px;
+    background-color: #09160e;
+    padding-top: 8px;
     padding-right: 80px;
     padding-left: 80px;
 }
+
+.post-social-links-section {
+    background-color: #09160e;
+    padding-top: 48px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+}
+
+.post-social-links-title {
+    margin: 0 0 14px;
+    color: white;
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+}
+
+.post-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
+
+.post-social-link {
+    color: white;
+    text-decoration: none;
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+}
+
+.post-social-link:hover {
+    color: #ffb300;
+}
+
 .social-icons {
     width: 100%;
     max-width: 1200px;
@@ -100,5 +133,10 @@
         padding-right: 30px;
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .post-social-links-section {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }

@@ -1,16 +1,23 @@
 .top-nav {
-    /* position: fixed; */
-    background: #000;
+    background:
+        radial-gradient(circle at 108% -8%, rgba(255, 179, 0, 0.6), transparent 36%),
+        linear-gradient(135deg, #004000 0%, #0c4e1b 40%, #004000 72%, #0d3317 100%);
     padding: 12px 80px;
     color: white;
     font-size: 15px;
     font-family: "Inter", sans-serif;
     font-weight: 500;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .nav-icon {
     width: 20px;
     height: 20px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,31 +26,31 @@
     color: inherit;
 }
 .house-icon {
-    background-image: url("../../assets/icons/favicon/favicon_green.png");
-    width: 30px;
-    height: 30px;
-    transform: scaleX(1.05);
+    width: auto;
+    height: auto;
+    transform: none;
+    background-image: none;
 }
-.house-icon:hover,
-.house-icon.current:hover {
-    background-image: url("../../assets/icons/favicon/favicon_orange_white_text.png") !important;
-    width: 30px;
-    height: 30px;
-    /* transform: scale(1.2); */
+.house-icon::after {
+    content: "FIS";
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
 }
-.house-icon.current {
-    /* background-image: url("../../assets/icons/favicon/favicon_orange_white_text.png"); */
-    width: 30px;
-    height: 30px;
-} 
+.house-icon:hover::after,
+.house-icon.current::after {
+    color: #ffb300;
+}
 .top-nav a {
     color: white;
     text-decoration: none;
     font-family: "Inter", sans-serif;
+    transition: color 0.12s ease;
 }
 .top-nav a:hover {
     color: #ffb300;
-    /* transform: scaleX(1.05); */
 }
 .top-nav a.current {
     color: #FFB300;
@@ -52,6 +59,7 @@
     display: flex;
     align-items: center;
     gap: 25px;
+    padding-top: 2px;
 }
 
 
@@ -63,8 +71,7 @@
     }
     /* TOP NAV */
     .top-nav {
-        padding-left: 8px;
-        padding-right: 8px;
+        padding: 10px 8px;
     }
     .top-nav .nav-content {
         padding: 0 12px;
