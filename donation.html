@@ -13,6 +13,8 @@
     <title>Donate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
     <link rel="icon" href="assets/icons/favicon/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -109,7 +111,16 @@
                         </div>
                     </fieldset>
 
+                    <input type="hidden" name="turnstile_token" id="turnstile_token">
+
                     <div class="donation-form-actions">
+                        <!-- Cloudflare Turnstile -->
+                        <div class="cf-turnstile"
+                            data-sitekey="0x4AAAAAAD8ObDZtjf1aCBRP"
+                            data-callback="onTurnstileSuccess"
+                            data-expired-callback="onTurnstileExpired"
+                            data-error-callback="onTurnstileError">
+                        </div>
                         <p class="helper-text">You’ll continue securely to Stripe to complete your payment.</p>
                         <button type="submit" class="donation-pay-btn">Continue to payment</button>
                     </div>

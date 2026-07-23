@@ -28,6 +28,7 @@
             <h1 id="title">Payment Succeeded</h1>
         </div>
         <p id="message-primary">Thank you for your payment. Your membership application has been received and is now being processed.</p>
+        <p id="payment-details" class="payment-details"></p>
         <p id="message-secondary">You will receive a confirmation email shortly once your enrolment has been reviewed and approved.</p>
         <p id="message-tertiary">If you do not receive an email within 24 hours, please contact us at <strong>thefoodinvestorssociety@gmail.com</strong>.</p>
 
@@ -41,6 +42,19 @@
             document.getElementById("message-primary").textContent = "Thank you for your donation. Your payment has been completed successfully.";
             document.getElementById("message-secondary").textContent = "We appreciate your support for The Food Investors Society.";
             document.getElementById("message-tertiary").innerHTML = 'A confirmation will be sent to your email address. If you need help, contact us at <strong>thefoodinvestorssociety@gmail.com</strong>.';
+        }
+
+        // Show payment amount + reference passed through in the success URL.
+        const amount = params.get("amount");
+        const reference = params.get("ref");
+        const currency = (params.get("currency") || "GBP").toUpperCase();
+        const symbol = currency === "GBP" ? "£" : (currency + " ");
+        const detailsEl = document.getElementById("payment-details");
+        if (detailsEl) {
+            const parts = [];
+            if (amount) parts.push("Amount paid: " + symbol + amount);
+            if (reference) parts.push("Reference: " + reference);
+            detailsEl.textContent = parts.join("  ·  ");
         }
     </script>
 </body>
