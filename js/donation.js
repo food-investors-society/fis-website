@@ -48,6 +48,21 @@ if (donationForm) {
       submitButton.textContent = "Processing...";
     }
   });
+
+  // Reset the form if the user navigates back to this page (e.g. browser Back
+  // from Stripe), including when it's restored from the bfcache — otherwise the
+  // button stays stuck on "Processing..." and the Turnstile token is stale.
+  window.addEventListener("pageshow", () => {
+    donationForm.dataset.submitting = "false";
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = "Continue to payment";
+    }
+    if (turnstileTokenInput) turnstileTokenInput.value = "";
+    if (window.turnstile && typeof window.turnstile.reset === "function") {
+      try { window.turnstile.reset(); } catch (e) {}
+    }
+  });
 }
 
 if (donationAmountInputs.length && customDonationField && customDonationInput) {
